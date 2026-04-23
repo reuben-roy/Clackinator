@@ -1,0 +1,1018 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09407CB93E65665A1D424986 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BACE66614CABDD9DD1085BA /* Cocoa.framework */; };
+		1C8A5E537E2DF8FC4EC3AE9E /* LaunchAtLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A436D1FF704CBD5731DEE5 /* LaunchAtLoginManager.swift */; };
+		1F87C8702E38CF62377FAFC3 /* AudioPlaybackEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750789D19241C49EEB8FA429 /* AudioPlaybackEngine.swift */; };
+		2EFC6CFC88B598B81DD14813 /* KeyTokAppStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0806C683BDA7600A5AE588F /* KeyTokAppStoreApp.swift */; };
+		326651424F01F33ED33EC2FE /* KeyTokCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F754C24C7D79BFD865A83C8 /* KeyTokCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4C30746ED235DF75E7F44EEF /* MenuBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952DA795DB9C924BF171C1DA /* MenuBarContentView.swift */; };
+		4C55B9CA7BA48D73BF0F3B83 /* KeyTokCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BECB6FE85896FBC85B35A1 /* KeyTokCoordinator.swift */; };
+		4CC156B37869FF055E46DB97 /* SoundPackLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F815A9203FDD5C54BB810E9 /* SoundPackLibrary.swift */; };
+		4EACD8A34D915115B389AD62 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BACE66614CABDD9DD1085BA /* Cocoa.framework */; };
+		53937D644FFD30F230525AAD /* MonitorKeyboardEventSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CD608F7D9117736FF645B8 /* MonitorKeyboardEventSource.swift */; };
+		577A974AF0F60E2D962C6A40 /* KeyboardPermissionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303A24EBA397FBC645E93CE9 /* KeyboardPermissionStatus.swift */; };
+		5FBD9A45273FF57D0F4B69FF /* DirectAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882BECF00D346C6E114F368 /* DirectAppDelegate.swift */; };
+		63A2368101567399DD96751C /* SoundPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D365245E8B825E3600B585BC /* SoundPack.swift */; };
+		6669D1D0EB028F6B6F6FC0F3 /* AppChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0AB0EA255567A662ED3330 /* AppChannel.swift */; };
+		67CE08CA87E6B7B03C10353D /* SettingsWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7C9C58BFACD2F9C5AE14B2 /* SettingsWindowView.swift */; };
+		67D6593416ED4806770D4874 /* SettingsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CC1CFF99F83453FE3FDF0A /* SettingsWindowController.swift */; };
+		6FC2556F55EDBFF40BC20EAB /* KeyboardPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67EFCC871AB81839D6A1820 /* KeyboardPermissionManager.swift */; };
+		7633C0B88A969DDA6AB76C36 /* SoundSynthesis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6C012336D25C661D85DF60 /* SoundSynthesis.swift */; };
+		8B0336909262FDA6F3E0E30D /* KeyTokCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F754C24C7D79BFD865A83C8 /* KeyTokCore.framework */; };
+		9AB3D612F6CA6C2DDBD39990 /* AppStoreAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546559BAD58E0F3126A78170 /* AppStoreAppDelegate.swift */; };
+		A27F29D9BDC40DA060585B98 /* EventTapKeyboardEventSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6587626A0C1B7C22E7555BB5 /* EventTapKeyboardEventSource.swift */; };
+		A3341CEEB78FBE1AB70928CE /* KeyboardEventSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EC8EE6523E7ACA36C2D7C9 /* KeyboardEventSource.swift */; };
+		A40B5ADB7BE6659BC06A45C7 /* KeyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7277482D92BD3B66860CD26 /* KeyEvent.swift */; };
+		A4F537F9E626230A987A6266 /* KeyTokCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F754C24C7D79BFD865A83C8 /* KeyTokCore.framework */; };
+		B24DF95E2238E04B75312A09 /* MenuBarLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806CFBFD0075C29B4F7241F6 /* MenuBarLabelView.swift */; };
+		C6E86EF75B8006AD93B2112C /* KeyboardEventSourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA7751AA7D85168999B9C49 /* KeyboardEventSourceFactory.swift */; };
+		C93A988D1DCF199A0859441F /* KeyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9FAABA39A6F3A16EB54F48 /* KeyClass.swift */; };
+		D92A3420EF6F8CB74942A6A8 /* SoundPackLibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5C2052FD771B6E397BB2B1 /* SoundPackLibraryTests.swift */; };
+		DAB782B23FBAEC3C998511BA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BACE66614CABDD9DD1085BA /* Cocoa.framework */; };
+		E182D07396E7175FB35C268A /* KeyTokCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F754C24C7D79BFD865A83C8 /* KeyTokCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E3AD77346CFCF4E04CD7FB12 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BACE66614CABDD9DD1085BA /* Cocoa.framework */; };
+		E3F6708CBFAD5889A56F128A /* KeyClassifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FB6176E1F5528A14C9D3BB /* KeyClassifierTests.swift */; };
+		E6C04F49A8A108156D141F46 /* KeyClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92E41B3FB53B22F0F71D483 /* KeyClassifier.swift */; };
+		EADE291044B2F171E297FA1D /* KeyTokDirectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD478BAC3D969128A4B7CD6 /* KeyTokDirectApp.swift */; };
+		EB2742437888D44648D69BE4 /* KeyTokCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F754C24C7D79BFD865A83C8 /* KeyTokCore.framework */; };
+		F40D95A3D8A291AEA07DBD21 /* KeyTokLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689A7419B19DB0E4AC716AE2 /* KeyTokLogger.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		717EFD8C5D9FEF90E35D013A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F18B5D22B7E6CE41639AD43A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 859437069B9C4D3A11BD8837;
+			remoteInfo = KeyTokCore;
+		};
+		7F8EE70E039BD1F40DD2E771 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F18B5D22B7E6CE41639AD43A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 859437069B9C4D3A11BD8837;
+			remoteInfo = KeyTokCore;
+		};
+		B580E2AD766C367F16451326 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F18B5D22B7E6CE41639AD43A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 859437069B9C4D3A11BD8837;
+			remoteInfo = KeyTokCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		111229E74459BDE606D13DDC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E182D07396E7175FB35C268A /* KeyTokCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DCA8BC36A7DABE39DF19BDD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				326651424F01F33ED33EC2FE /* KeyTokCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0690262F5362BE00B94B3ADD /* render_homebrew_cask.rb */ = {isa = PBXFileReference; includeInIndex = 1; path = render_homebrew_cask.rb; sourceTree = "<group>"; };
+		0B536A51A30F7BADC7F6E1A0 /* KeyTokDirect-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KeyTokDirect-Info.plist"; sourceTree = "<group>"; };
+		0D5C2052FD771B6E397BB2B1 /* SoundPackLibraryTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SoundPackLibraryTests.swift; sourceTree = "<group>"; };
+		1A0C800A56A1B0595DF5E1C7 /* generate_xcodeproj.rb */ = {isa = PBXFileReference; includeInIndex = 1; path = generate_xcodeproj.rb; sourceTree = "<group>"; };
+		2202AC5FC8981329A10D15F6 /* package_direct_release.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = package_direct_release.sh; sourceTree = "<group>"; };
+		25CB98F69B28771C397C2E30 /* KeyTokAppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyTokAppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27CD608F7D9117736FF645B8 /* MonitorKeyboardEventSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MonitorKeyboardEventSource.swift; sourceTree = "<group>"; };
+		2C4FD2A3817438A17B73FF32 /* release.md */ = {isa = PBXFileReference; includeInIndex = 1; path = release.md; sourceTree = "<group>"; };
+		2F754C24C7D79BFD865A83C8 /* KeyTokCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyTokCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		303A24EBA397FBC645E93CE9 /* KeyboardPermissionStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyboardPermissionStatus.swift; sourceTree = "<group>"; };
+		38F7902A92315154C169D97F /* KeyTokCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyTokCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A0AB0EA255567A662ED3330 /* AppChannel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppChannel.swift; sourceTree = "<group>"; };
+		4882BECF00D346C6E114F368 /* DirectAppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DirectAppDelegate.swift; sourceTree = "<group>"; };
+		4A9FAABA39A6F3A16EB54F48 /* KeyClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyClass.swift; sourceTree = "<group>"; };
+		546559BAD58E0F3126A78170 /* AppStoreAppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppStoreAppDelegate.swift; sourceTree = "<group>"; };
+		5BACE66614CABDD9DD1085BA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		5DA7751AA7D85168999B9C49 /* KeyboardEventSourceFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyboardEventSourceFactory.swift; sourceTree = "<group>"; };
+		60A436D1FF704CBD5731DEE5 /* LaunchAtLoginManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginManager.swift; sourceTree = "<group>"; };
+		631F2C75905C7DD11D284204 /* build_and_run.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = build_and_run.sh; sourceTree = "<group>"; };
+		6587626A0C1B7C22E7555BB5 /* EventTapKeyboardEventSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventTapKeyboardEventSource.swift; sourceTree = "<group>"; };
+		689A7419B19DB0E4AC716AE2 /* KeyTokLogger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyTokLogger.swift; sourceTree = "<group>"; };
+		750789D19241C49EEB8FA429 /* AudioPlaybackEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudioPlaybackEngine.swift; sourceTree = "<group>"; };
+		79CC1CFF99F83453FE3FDF0A /* SettingsWindowController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsWindowController.swift; sourceTree = "<group>"; };
+		7AD478BAC3D969128A4B7CD6 /* KeyTokDirectApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyTokDirectApp.swift; sourceTree = "<group>"; };
+		806CFBFD0075C29B4F7241F6 /* MenuBarLabelView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MenuBarLabelView.swift; sourceTree = "<group>"; };
+		952DA795DB9C924BF171C1DA /* MenuBarContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MenuBarContentView.swift; sourceTree = "<group>"; };
+		95BECB6FE85896FBC85B35A1 /* KeyTokCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyTokCoordinator.swift; sourceTree = "<group>"; };
+		97C93D466A5DDC2821359CB4 /* direct-release.yml */ = {isa = PBXFileReference; includeInIndex = 1; path = "direct-release.yml"; sourceTree = "<group>"; };
+		9E6C012336D25C661D85DF60 /* SoundSynthesis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SoundSynthesis.swift; sourceTree = "<group>"; };
+		9E7C9C58BFACD2F9C5AE14B2 /* SettingsWindowView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsWindowView.swift; sourceTree = "<group>"; };
+		9F815A9203FDD5C54BB810E9 /* SoundPackLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SoundPackLibrary.swift; sourceTree = "<group>"; };
+		A20482899B16865C77E7AB18 /* app-store-validation.md */ = {isa = PBXFileReference; includeInIndex = 1; path = "app-store-validation.md"; sourceTree = "<group>"; };
+		A92E41B3FB53B22F0F71D483 /* KeyClassifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyClassifier.swift; sourceTree = "<group>"; };
+		AAAF6919A1787F6B70B57B5A /* KeyTokDirect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyTokDirect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4EC8EE6523E7ACA36C2D7C9 /* KeyboardEventSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyboardEventSource.swift; sourceTree = "<group>"; };
+		B67EFCC871AB81839D6A1820 /* KeyboardPermissionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyboardPermissionManager.swift; sourceTree = "<group>"; };
+		C0806C683BDA7600A5AE588F /* KeyTokAppStoreApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyTokAppStoreApp.swift; sourceTree = "<group>"; };
+		C2FB6176E1F5528A14C9D3BB /* KeyClassifierTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyClassifierTests.swift; sourceTree = "<group>"; };
+		C93D0EE4AB11D0DD378D02E0 /* keytok.rb.erb */ = {isa = PBXFileReference; includeInIndex = 1; path = keytok.rb.erb; sourceTree = "<group>"; };
+		D365245E8B825E3600B585BC /* SoundPack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SoundPack.swift; sourceTree = "<group>"; };
+		D596D9E946821D10D2A9EACD /* KeyTokAppStore.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = KeyTokAppStore.entitlements; sourceTree = "<group>"; };
+		D7277482D92BD3B66860CD26 /* KeyEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyEvent.swift; sourceTree = "<group>"; };
+		DF595D2515EF9380FB4E2CD7 /* KeyTokAppStore-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KeyTokAppStore-Info.plist"; sourceTree = "<group>"; };
+		FDAA733A4CA6828BA8711B77 /* ci.yml */ = {isa = PBXFileReference; includeInIndex = 1; path = ci.yml; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		468BB0008A37B8181CD72FA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAB782B23FBAEC3C998511BA /* Cocoa.framework in Frameworks */,
+				8B0336909262FDA6F3E0E30D /* KeyTokCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		797A051C1B557CC780D9B210 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EACD8A34D915115B389AD62 /* Cocoa.framework in Frameworks */,
+				EB2742437888D44648D69BE4 /* KeyTokCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87B37AB094954FAA270899D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3AD77346CFCF4E04CD7FB12 /* Cocoa.framework in Frameworks */,
+				A4F537F9E626230A987A6266 /* KeyTokCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90828B3F8CB93E98A707C519 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09407CB93E65665A1D424986 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D5523008C2917D080674782 /* Casks */ = {
+			isa = PBXGroup;
+			children = (
+				C93D0EE4AB11D0DD378D02E0 /* keytok.rb.erb */,
+			);
+			name = Casks;
+			path = Casks;
+			sourceTree = "<group>";
+		};
+		12689A96E2E7F21D053E29A9 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				DF595D2515EF9380FB4E2CD7 /* KeyTokAppStore-Info.plist */,
+				D596D9E946821D10D2A9EACD /* KeyTokAppStore.entitlements */,
+				0B536A51A30F7BADC7F6E1A0 /* KeyTokDirect-Info.plist */,
+			);
+			name = Config;
+			path = Config;
+			sourceTree = "<group>";
+		};
+		16D2B88973DBE1F3DF0E9CAD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3A0AB0EA255567A662ED3330 /* AppChannel.swift */,
+				4A9FAABA39A6F3A16EB54F48 /* KeyClass.swift */,
+				D7277482D92BD3B66860CD26 /* KeyEvent.swift */,
+			);
+			name = Models;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2607CEB8F736B31C229205CA /* AppStore */ = {
+			isa = PBXGroup;
+			children = (
+				546559BAD58E0F3126A78170 /* AppStoreAppDelegate.swift */,
+				C0806C683BDA7600A5AE588F /* KeyTokAppStoreApp.swift */,
+			);
+			name = AppStore;
+			path = AppStore;
+			sourceTree = "<group>";
+		};
+		293E95A4CB33263B164D7284 /* Direct */ = {
+			isa = PBXGroup;
+			children = (
+				4882BECF00D346C6E114F368 /* DirectAppDelegate.swift */,
+				7AD478BAC3D969128A4B7CD6 /* KeyTokDirectApp.swift */,
+			);
+			name = Direct;
+			path = Direct;
+			sourceTree = "<group>";
+		};
+		3B4E3A1FB37B9260147FB864 = {
+			isa = PBXGroup;
+			children = (
+				D9C58E36CA53FFD3331E47FF /* Products */,
+				D16EF326241E5BC4BCF2646F /* Frameworks */,
+				A2A7A463DBE4F5BE6852CAC5 /* App */,
+				7729778F7F56005F2B59FA9B /* Core */,
+				F72B69A9B70CDDF0672B9805 /* Tests */,
+				12689A96E2E7F21D053E29A9 /* Config */,
+				E4DEB93C5A93BB9F2F7D3257 /* script */,
+				87D3820842CF88455FA92A0A /* docs */,
+				668760E09E28BE7F7B312A88 /* .github */,
+				864601F32E86FDBA08FF250E /* Homebrew */,
+			);
+			sourceTree = "<group>";
+		};
+		5FB95E07B554A0BB3596220D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				952DA795DB9C924BF171C1DA /* MenuBarContentView.swift */,
+				806CFBFD0075C29B4F7241F6 /* MenuBarLabelView.swift */,
+				9E7C9C58BFACD2F9C5AE14B2 /* SettingsWindowView.swift */,
+			);
+			name = UI;
+			path = UI;
+			sourceTree = "<group>";
+		};
+		668760E09E28BE7F7B312A88 /* .github */ = {
+			isa = PBXGroup;
+			children = (
+				B733F6D7F40EDA676196E526 /* workflows */,
+			);
+			name = .github;
+			path = .github;
+			sourceTree = "<group>";
+		};
+		677F0D731F76459CA36E9A43 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				6587626A0C1B7C22E7555BB5 /* EventTapKeyboardEventSource.swift */,
+				A92E41B3FB53B22F0F71D483 /* KeyClassifier.swift */,
+				B4EC8EE6523E7ACA36C2D7C9 /* KeyboardEventSource.swift */,
+				5DA7751AA7D85168999B9C49 /* KeyboardEventSourceFactory.swift */,
+				27CD608F7D9117736FF645B8 /* MonitorKeyboardEventSource.swift */,
+			);
+			name = Input;
+			path = Input;
+			sourceTree = "<group>";
+		};
+		6FBB734077A4B2050D4AE5C0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				95BECB6FE85896FBC85B35A1 /* KeyTokCoordinator.swift */,
+				79CC1CFF99F83453FE3FDF0A /* SettingsWindowController.swift */,
+			);
+			name = App;
+			path = App;
+			sourceTree = "<group>";
+		};
+		7729778F7F56005F2B59FA9B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6FBB734077A4B2050D4AE5C0 /* App */,
+				82E39CDDBA4686A08DA03A46 /* Audio */,
+				677F0D731F76459CA36E9A43 /* Input */,
+				16D2B88973DBE1F3DF0E9CAD /* Models */,
+				7B50DCD1C609743F4D5643EB /* Support */,
+				5FB95E07B554A0BB3596220D /* UI */,
+			);
+			name = Core;
+			path = Core;
+			sourceTree = "<group>";
+		};
+		7B50DCD1C609743F4D5643EB /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				B67EFCC871AB81839D6A1820 /* KeyboardPermissionManager.swift */,
+				303A24EBA397FBC645E93CE9 /* KeyboardPermissionStatus.swift */,
+				689A7419B19DB0E4AC716AE2 /* KeyTokLogger.swift */,
+				60A436D1FF704CBD5731DEE5 /* LaunchAtLoginManager.swift */,
+			);
+			name = Support;
+			path = Support;
+			sourceTree = "<group>";
+		};
+		82D28F0F64CEF19C5FB6E183 /* KeyTokCoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				C2FB6176E1F5528A14C9D3BB /* KeyClassifierTests.swift */,
+				0D5C2052FD771B6E397BB2B1 /* SoundPackLibraryTests.swift */,
+			);
+			name = KeyTokCoreTests;
+			path = KeyTokCoreTests;
+			sourceTree = "<group>";
+		};
+		82E39CDDBA4686A08DA03A46 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				750789D19241C49EEB8FA429 /* AudioPlaybackEngine.swift */,
+				D365245E8B825E3600B585BC /* SoundPack.swift */,
+				9F815A9203FDD5C54BB810E9 /* SoundPackLibrary.swift */,
+				9E6C012336D25C661D85DF60 /* SoundSynthesis.swift */,
+			);
+			name = Audio;
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		864601F32E86FDBA08FF250E /* Homebrew */ = {
+			isa = PBXGroup;
+			children = (
+				0D5523008C2917D080674782 /* Casks */,
+			);
+			name = Homebrew;
+			path = Homebrew;
+			sourceTree = "<group>";
+		};
+		87D3820842CF88455FA92A0A /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				A20482899B16865C77E7AB18 /* app-store-validation.md */,
+				2C4FD2A3817438A17B73FF32 /* release.md */,
+			);
+			name = docs;
+			path = docs;
+			sourceTree = "<group>";
+		};
+		A2A7A463DBE4F5BE6852CAC5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				293E95A4CB33263B164D7284 /* Direct */,
+				2607CEB8F736B31C229205CA /* AppStore */,
+			);
+			name = App;
+			path = App;
+			sourceTree = "<group>";
+		};
+		B733F6D7F40EDA676196E526 /* workflows */ = {
+			isa = PBXGroup;
+			children = (
+				FDAA733A4CA6828BA8711B77 /* ci.yml */,
+				97C93D466A5DDC2821359CB4 /* direct-release.yml */,
+			);
+			name = workflows;
+			path = workflows;
+			sourceTree = "<group>";
+		};
+		D16EF326241E5BC4BCF2646F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9F6E4F4D0A20B19C45A8F9B /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D9C58E36CA53FFD3331E47FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAAF6919A1787F6B70B57B5A /* KeyTokDirect.app */,
+				25CB98F69B28771C397C2E30 /* KeyTokAppStore.app */,
+				2F754C24C7D79BFD865A83C8 /* KeyTokCore.framework */,
+				38F7902A92315154C169D97F /* KeyTokCoreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D9F6E4F4D0A20B19C45A8F9B /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				5BACE66614CABDD9DD1085BA /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		E4DEB93C5A93BB9F2F7D3257 /* script */ = {
+			isa = PBXGroup;
+			children = (
+				631F2C75905C7DD11D284204 /* build_and_run.sh */,
+				1A0C800A56A1B0595DF5E1C7 /* generate_xcodeproj.rb */,
+				2202AC5FC8981329A10D15F6 /* package_direct_release.sh */,
+				0690262F5362BE00B94B3ADD /* render_homebrew_cask.rb */,
+			);
+			name = script;
+			path = script;
+			sourceTree = "<group>";
+		};
+		F72B69A9B70CDDF0672B9805 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				82D28F0F64CEF19C5FB6E183 /* KeyTokCoreTests */,
+			);
+			name = Tests;
+			path = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D9944232776E4A550CC46BEE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0439AE68FB7BEBB78102F59B /* KeyTokDirect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44BC42D8DED6F7D7E74CB0DC /* Build configuration list for PBXNativeTarget "KeyTokDirect" */;
+			buildPhases = (
+				9A489F6484B5CD6AC90B2FB4 /* Sources */,
+				468BB0008A37B8181CD72FA0 /* Frameworks */,
+				215BE095340CCF5E84FAD0DA /* Resources */,
+				111229E74459BDE606D13DDC /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D55D15E7FC253B5E34BFAFD /* PBXTargetDependency */,
+			);
+			name = KeyTokDirect;
+			productName = KeyTokDirect;
+			productReference = AAAF6919A1787F6B70B57B5A /* KeyTokDirect.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5409EBC09C7DD2719AC3068D /* KeyTokAppStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C26F2A8B2ABCE38772839AA /* Build configuration list for PBXNativeTarget "KeyTokAppStore" */;
+			buildPhases = (
+				0AEB6A8CFD3A09EBC972EEC2 /* Sources */,
+				87B37AB094954FAA270899D7 /* Frameworks */,
+				3D12065E4D42B5CCD718DF2C /* Resources */,
+				2DCA8BC36A7DABE39DF19BDD /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBF661BF9CE258465A34154A /* PBXTargetDependency */,
+			);
+			name = KeyTokAppStore;
+			productName = KeyTokAppStore;
+			productReference = 25CB98F69B28771C397C2E30 /* KeyTokAppStore.app */;
+			productType = "com.apple.product-type.application";
+		};
+		859437069B9C4D3A11BD8837 /* KeyTokCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D37D56532F249E7225D6999 /* Build configuration list for PBXNativeTarget "KeyTokCore" */;
+			buildPhases = (
+				D9944232776E4A550CC46BEE /* Headers */,
+				90937EDFC35240A59A58F236 /* Sources */,
+				90828B3F8CB93E98A707C519 /* Frameworks */,
+				A5F849FF730A86A9B19C2B76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeyTokCore;
+			productName = KeyTokCore;
+			productReference = 2F754C24C7D79BFD865A83C8 /* KeyTokCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8E4F581FFEAF78BB7EB534FA /* KeyTokCoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14FD7D6A0EF1C4A154EEA2AD /* Build configuration list for PBXNativeTarget "KeyTokCoreTests" */;
+			buildPhases = (
+				2B28770199B29BF56869AC04 /* Sources */,
+				797A051C1B557CC780D9B210 /* Frameworks */,
+				2BD4634796815A545D3BDBA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A2DBB605FF0F32B5BAF4AE6 /* PBXTargetDependency */,
+			);
+			name = KeyTokCoreTests;
+			productName = KeyTokCoreTests;
+			productReference = 38F7902A92315154C169D97F /* KeyTokCoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F18B5D22B7E6CE41639AD43A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1640;
+			};
+			buildConfigurationList = C47524AB6FA4BA6DDE75377B /* Build configuration list for PBXProject "KeyTok" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3B4E3A1FB37B9260147FB864;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D9C58E36CA53FFD3331E47FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0439AE68FB7BEBB78102F59B /* KeyTokDirect */,
+				5409EBC09C7DD2719AC3068D /* KeyTokAppStore */,
+				859437069B9C4D3A11BD8837 /* KeyTokCore */,
+				8E4F581FFEAF78BB7EB534FA /* KeyTokCoreTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		215BE095340CCF5E84FAD0DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BD4634796815A545D3BDBA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D12065E4D42B5CCD718DF2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5F849FF730A86A9B19C2B76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0AEB6A8CFD3A09EBC972EEC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AB3D612F6CA6C2DDBD39990 /* AppStoreAppDelegate.swift in Sources */,
+				2EFC6CFC88B598B81DD14813 /* KeyTokAppStoreApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B28770199B29BF56869AC04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3F6708CBFAD5889A56F128A /* KeyClassifierTests.swift in Sources */,
+				D92A3420EF6F8CB74942A6A8 /* SoundPackLibraryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90937EDFC35240A59A58F236 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C55B9CA7BA48D73BF0F3B83 /* KeyTokCoordinator.swift in Sources */,
+				67D6593416ED4806770D4874 /* SettingsWindowController.swift in Sources */,
+				1F87C8702E38CF62377FAFC3 /* AudioPlaybackEngine.swift in Sources */,
+				63A2368101567399DD96751C /* SoundPack.swift in Sources */,
+				4CC156B37869FF055E46DB97 /* SoundPackLibrary.swift in Sources */,
+				7633C0B88A969DDA6AB76C36 /* SoundSynthesis.swift in Sources */,
+				A27F29D9BDC40DA060585B98 /* EventTapKeyboardEventSource.swift in Sources */,
+				E6C04F49A8A108156D141F46 /* KeyClassifier.swift in Sources */,
+				A3341CEEB78FBE1AB70928CE /* KeyboardEventSource.swift in Sources */,
+				C6E86EF75B8006AD93B2112C /* KeyboardEventSourceFactory.swift in Sources */,
+				53937D644FFD30F230525AAD /* MonitorKeyboardEventSource.swift in Sources */,
+				6669D1D0EB028F6B6F6FC0F3 /* AppChannel.swift in Sources */,
+				C93A988D1DCF199A0859441F /* KeyClass.swift in Sources */,
+				A40B5ADB7BE6659BC06A45C7 /* KeyEvent.swift in Sources */,
+				6FC2556F55EDBFF40BC20EAB /* KeyboardPermissionManager.swift in Sources */,
+				577A974AF0F60E2D962C6A40 /* KeyboardPermissionStatus.swift in Sources */,
+				F40D95A3D8A291AEA07DBD21 /* KeyTokLogger.swift in Sources */,
+				1C8A5E537E2DF8FC4EC3AE9E /* LaunchAtLoginManager.swift in Sources */,
+				4C30746ED235DF75E7F44EEF /* MenuBarContentView.swift in Sources */,
+				B24DF95E2238E04B75312A09 /* MenuBarLabelView.swift in Sources */,
+				67CE08CA87E6B7B03C10353D /* SettingsWindowView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A489F6484B5CD6AC90B2FB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FBD9A45273FF57D0F4B69FF /* DirectAppDelegate.swift in Sources */,
+				EADE291044B2F171E297FA1D /* KeyTokDirectApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2A2DBB605FF0F32B5BAF4AE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KeyTokCore;
+			target = 859437069B9C4D3A11BD8837 /* KeyTokCore */;
+			targetProxy = B580E2AD766C367F16451326 /* PBXContainerItemProxy */;
+		};
+		4D55D15E7FC253B5E34BFAFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KeyTokCore;
+			target = 859437069B9C4D3A11BD8837 /* KeyTokCore */;
+			targetProxy = 717EFD8C5D9FEF90E35D013A /* PBXContainerItemProxy */;
+		};
+		CBF661BF9CE258465A34154A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KeyTokCore;
+			target = 859437069B9C4D3A11BD8837 /* KeyTokCore */;
+			targetProxy = 7F8EE70E039BD1F40DD2E771 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		12D77E6C9410E5E16D34B444 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Config/KeyTokDirect-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keytok.direct;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		49C86C54D99AFA7986489B5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keytok.coretests;
+				SDKROOT = macosx;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "";
+			};
+			name = Debug;
+		};
+		553A8995F3BB78D551DBBE49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Config/KeyTokAppStore.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Config/KeyTokAppStore-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keytok.appstore;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		6B1E47C1E463B892FB6CCDAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Config/KeyTokDirect-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keytok.direct;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		85EEDBECBDAA2EF4A3061E43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keytok.core;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9D23D72FE38C0BA650BED348 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_ENTITLEMENTS = Config/KeyTokAppStore.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Config/KeyTokAppStore-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keytok.appstore;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BCCD1CB7EC31851F312BAD15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CF7EEDC2F15CB0BFD302213B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		DFE3461AE878CFD9AF54531A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keytok.core;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EE5DF328E139B4F565C3EBE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keytok.coretests;
+				SDKROOT = macosx;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14FD7D6A0EF1C4A154EEA2AD /* Build configuration list for PBXNativeTarget "KeyTokCoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE5DF328E139B4F565C3EBE7 /* Release */,
+				49C86C54D99AFA7986489B5D /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C26F2A8B2ABCE38772839AA /* Build configuration list for PBXNativeTarget "KeyTokAppStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				553A8995F3BB78D551DBBE49 /* Release */,
+				9D23D72FE38C0BA650BED348 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D37D56532F249E7225D6999 /* Build configuration list for PBXNativeTarget "KeyTokCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFE3461AE878CFD9AF54531A /* Release */,
+				85EEDBECBDAA2EF4A3061E43 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44BC42D8DED6F7D7E74CB0DC /* Build configuration list for PBXNativeTarget "KeyTokDirect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B1E47C1E463B892FB6CCDAC /* Release */,
+				12D77E6C9410E5E16D34B444 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C47524AB6FA4BA6DDE75377B /* Build configuration list for PBXProject "KeyTok" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF7EEDC2F15CB0BFD302213B /* Debug */,
+				BCCD1CB7EC31851F312BAD15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F18B5D22B7E6CE41639AD43A /* Project object */;
+}

@@ -1,0 +1,85 @@
+name: Direct Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Release version, for example 0.1.0"
+        required: true
+      owner:
+        description: "GitHub owner for the release repository"
+        required: true
+      repo:
+        description: "GitHub repository name for the release repository"
+        required: true
+      tap-repository:
+        description: "Optional tap repository in owner/name form"
+        required: false
+
+jobs:
+  package-and-publish:
+    runs-on: macos-15
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+
+      - name: Import signing certificates
+        if: ${{ secrets.BUILD_CERTIFICATE_P12 != '' }}
+        uses: apple-actions/import-codesign-certs@v3
+        with:
+          p12-file-base64: ${{ secrets.BUILD_CERTIFICATE_P12 }}
+          p12-password: ${{ secrets.BUILD_CERTIFICATE_PASSWORD }}
+
+      - name: Regenerate Xcode project
+        run: ruby ./script/generate_xcodeproj.rb
+
+      - name: Package direct release
+        env:
+          NOTARY_KEYCHAIN_PROFILE: ${{ secrets.NOTARY_KEYCHAIN_PROFILE }}
+        run: ./script/package_direct_release.sh "${{ inputs.version }}"
+
+      - name: Capture SHA256
+        id: sha
+        run: |
+          SHA_VALUE="$(shasum -a 256 ./build/export/KeyTokDirect-${{ inputs.version }}.zip | awk '{print $1}')"
+          echo "value=$SHA_VALUE" >> "$GITHUB_OUTPUT"
+
+      - name: Render Homebrew cask
+        run: |
+          ./script/render_homebrew_cask.rb \
+            "${{ inputs.version }}" \
+            "${{ steps.sha.outputs.value }}" \
+            "${{ inputs.owner }}" \
+            "${{ inputs.repo }}" \
+            "./build/export/keytok.rb"
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ inputs.version }}
+          files: |
+            ./build/export/KeyTokDirect-${{ inputs.version }}.zip
+            ./build/export/KeyTokDirect-${{ inputs.version }}.sha256
+            ./build/export/keytok.rb
+
+      - name: Update Homebrew tap
+        if: ${{ inputs.tap-repository != '' && secrets.HOMEBREW_TAP_TOKEN != '' }}
+        env:
+          GH_TOKEN: ${{ secrets.HOMEBREW_TAP_TOKEN }}
+        run: |
+          gh repo clone "${{ inputs.tap-repository }}" ./build/homebrew-tap
+          mkdir -p ./build/homebrew-tap/Casks
+          cp ./build/export/keytok.rb ./build/homebrew-tap/Casks/keytok.rb
+          cd ./build/homebrew-tap
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Casks/keytok.rb
+          git commit -m "Update KeyTok to v${{ inputs.version }}"
+          git push

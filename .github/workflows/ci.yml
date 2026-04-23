@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: macos-15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+
+      - name: Regenerate Xcode project
+        run: ruby ./script/generate_xcodeproj.rb
+
+      - name: Verify generated files are committed
+        run: git diff --exit-code
+
+      - name: Test direct target
+        run: |
+          xcodebuild \
+            -project KeyTok.xcodeproj \
+            -scheme KeyTokDirect \
+            -destination "platform=macOS" \
+            CODE_SIGNING_ALLOWED=NO \
+            test
+
+      - name: Build App Store target
+        run: |
+          xcodebuild \
+            -project KeyTok.xcodeproj \
+            -scheme KeyTokAppStore \
+            -destination "platform=macOS" \
+            CODE_SIGNING_ALLOWED=NO \
+            build

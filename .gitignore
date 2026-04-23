@@ -1,0 +1,16 @@
+.DS_Store
+
+# Local build outputs
+build/
+DerivedData/
+
+# Xcode user-specific state
+*.xcuserstate
+*.xcscmblueprint
+xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+
+# Local Codex metadata
+.codex/
