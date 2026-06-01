@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "859437069B9C4D3A11BD8837"
-               BuildableName = "KeyTokCore.framework"
-               BlueprintName = "KeyTokCore"
-               ReferencedContainer = "container:KeyTok.xcodeproj">
+               BlueprintIdentifier = "29DB365A7382032B09F01E6B"
+               BuildableName = "ClackinatorCore.framework"
+               BlueprintName = "ClackinatorCore"
+               ReferencedContainer = "container:Clackinator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5409EBC09C7DD2719AC3068D"
-               BuildableName = "KeyTokAppStore.app"
-               BlueprintName = "KeyTokAppStore"
-               ReferencedContainer = "container:KeyTok.xcodeproj">
+               BlueprintIdentifier = "621926D941F6F8FCD364939B"
+               BuildableName = "Clackinator.app"
+               BlueprintName = "ClackinatorAppStore"
+               ReferencedContainer = "container:Clackinator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,10 +44,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5409EBC09C7DD2719AC3068D"
-            BuildableName = "KeyTokAppStore.app"
-            BlueprintName = "KeyTokAppStore"
-            ReferencedContainer = "container:KeyTok.xcodeproj">
+            BlueprintIdentifier = "621926D941F6F8FCD364939B"
+            BuildableName = "Clackinator.app"
+            BlueprintName = "ClackinatorAppStore"
+            ReferencedContainer = "container:Clackinator.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -67,10 +67,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5409EBC09C7DD2719AC3068D"
-            BuildableName = "KeyTokAppStore.app"
-            BlueprintName = "KeyTokAppStore"
-            ReferencedContainer = "container:KeyTok.xcodeproj">
+            BlueprintIdentifier = "621926D941F6F8FCD364939B"
+            BuildableName = "Clackinator.app"
+            BlueprintName = "ClackinatorAppStore"
+            ReferencedContainer = "container:Clackinator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -84,10 +84,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5409EBC09C7DD2719AC3068D"
-            BuildableName = "KeyTokAppStore.app"
-            BlueprintName = "KeyTokAppStore"
-            ReferencedContainer = "container:KeyTok.xcodeproj">
+            BlueprintIdentifier = "621926D941F6F8FCD364939B"
+            BuildableName = "Clackinator.app"
+            BlueprintName = "ClackinatorAppStore"
+            ReferencedContainer = "container:Clackinator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -3,7 +3,14 @@ import CoreGraphics
 import Foundation
 
 @MainActor
-public final class KeyboardPermissionManager {
+public protocol KeyboardPermissionManaging: AnyObject {
+    func preflight() -> Bool
+    @discardableResult func requestAccess() -> Bool
+    func openSystemSettings()
+}
+
+@MainActor
+public final class KeyboardPermissionManager: KeyboardPermissionManaging {
     public static let shared = KeyboardPermissionManager()
 
     private init() {}

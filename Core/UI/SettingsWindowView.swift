@@ -1,9 +1,9 @@
 import SwiftUI
 
 public struct SettingsWindowView: View {
-    @ObservedObject private var coordinator: KeyTokCoordinator
+    @ObservedObject private var coordinator: ClackinatorCoordinator
 
-    public init(coordinator: KeyTokCoordinator) {
+    public init(coordinator: ClackinatorCoordinator) {
         self.coordinator = coordinator
     }
 
@@ -37,7 +37,7 @@ public struct SettingsWindowView: View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(alignment: .top) {
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("KeyTok")
+                    Text("Clackinator")
                         .font(.system(size: 30, weight: .bold, design: .rounded))
                     Text("Mechanical keyboard presence for every app on your Mac.")
                         .font(.headline)
@@ -78,38 +78,68 @@ public struct SettingsWindowView: View {
     }
 
     private var soundSection: some View {
-        SettingsCard(title: "Sound Packs", subtitle: "Three built-in presets ship with original generated sounds for standard, modifier, navigation, return, delete, and space keys.") {
-            VStack(alignment: .leading, spacing: 10) {
-                ForEach(coordinator.availableSoundPacks) { pack in
+        SettingsCard(title: "Sound Packs", subtitle: "Five built-in presets cover the original generated packs plus two sampled packs. Custom packs are sliced locally from one imported audio file.") {
+            VStack(alignment: .leading, spacing: 14) {
+                Text("Built-In")
+                    .font(.headline)
+
+                ForEach(coordinator.builtInSoundPacks) { pack in
                     Button {
                         coordinator.selectedSoundPackID = pack.id
                     } label: {
-                        HStack(alignment: .top, spacing: 12) {
-                            Image(systemName: coordinator.selectedSoundPackID == pack.id ? "checkmark.circle.fill" : "circle")
-                                .foregroundStyle(coordinator.selectedSoundPackID == pack.id ? .teal : .secondary)
-                                .font(.title3)
-
-                            VStack(alignment: .leading, spacing: 4) {
-                                Text(pack.name)
-                                    .font(.headline)
-                                    .foregroundStyle(.primary)
-                                Text(pack.summary)
-                                    .font(.subheadline)
-                                    .foregroundStyle(.secondary)
-                            }
-
-                            Spacer()
-                        }
-                        .padding(14)
-                        .background(
-                            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                                .fill(coordinator.selectedSoundPackID == pack.id ? Color.teal.opacity(0.12) : Color.primary.opacity(0.03))
-                        )
+                        packCard(pack: pack, secondaryLine: pack.summary)
                     }
                     .buttonStyle(.plain)
                 }
 
+                Divider()
+
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Custom Packs")
+                        .font(.headline)
+
+                    if coordinator.customSoundPacks.isEmpty {
+                        Text("Import an MP3, M4A, WAV, or AIFF clip to build a custom keyboard pack.")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                    } else {
+                        ForEach(coordinator.customSoundPacks) { pack in
+                            HStack(alignment: .top, spacing: 12) {
+                                Button {
+                                    coordinator.selectedSoundPackID = pack.id
+                                } label: {
+                                    packCard(pack: pack, secondaryLine: pack.sourceFilename ?? pack.summary)
+                                }
+                                .buttonStyle(.plain)
+
+                                VStack(alignment: .trailing, spacing: 8) {
+                                    Button("Preview") {
+                                        coordinator.selectedSoundPackID = pack.id
+                                        coordinator.previewSelectedSoundPack()
+                                    }
+                                    .buttonStyle(.link)
+
+                                    Button("Delete", role: .destructive) {
+                                        coordinator.deleteCustomSoundPack(id: pack.id)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                if let soundPackErrorMessage = coordinator.soundPackErrorMessage {
+                    Text(soundPackErrorMessage)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+
                 HStack {
+                    Button("Import Audio…") {
+                        coordinator.importCustomSoundPack()
+                    }
+                    .buttonStyle(.bordered)
+
                     Button("Preview Selected Pack") {
                         coordinator.previewSelectedSoundPack()
                     }
@@ -122,7 +152,7 @@ public struct SettingsWindowView: View {
     }
 
     private var behaviorSection: some View {
-        SettingsCard(title: "Behavior", subtitle: "KeyTok stays local, offline, and lightweight. Settings are stored in UserDefaults.") {
+        SettingsCard(title: "Behavior", subtitle: "Clackinator stays local, offline, and lightweight. Settings are stored in UserDefaults.") {
             VStack(alignment: .leading, spacing: 12) {
                 Toggle("Enable keyboard sounds", isOn: $coordinator.isEnabled)
                 Toggle("Launch at login", isOn: $coordinator.launchAtLoginEnabled)
@@ -176,6 +206,41 @@ public struct SettingsWindowView: View {
             }
             .keyboardShortcut(.defaultAction)
         }
+    }
+
+    private func packCard(pack: SoundPack, secondaryLine: String) -> some View {
+        HStack(alignment: .top, spacing: 12) {
+            Image(systemName: coordinator.selectedSoundPackID == pack.id ? "checkmark.circle.fill" : "circle")
+                .foregroundStyle(coordinator.selectedSoundPackID == pack.id ? .teal : .secondary)
+                .font(.title3)
+
+            VStack(alignment: .leading, spacing: 4) {
+                HStack(spacing: 8) {
+                    Text(pack.name)
+                        .font(.headline)
+                        .foregroundStyle(.primary)
+
+                    if pack.isCustom {
+                        Text("Custom")
+                            .font(.caption.weight(.semibold))
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 4)
+                            .background(Color.primary.opacity(0.08), in: Capsule())
+                    }
+                }
+
+                Text(secondaryLine)
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            }
+
+            Spacer()
+        }
+        .padding(14)
+        .background(
+            RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .fill(coordinator.selectedSoundPackID == pack.id ? Color.teal.opacity(0.12) : Color.primary.opacity(0.03))
+        )
     }
 
     private func runtimeRow(label: String, value: String) -> some View {

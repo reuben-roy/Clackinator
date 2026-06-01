@@ -2,7 +2,13 @@ import Foundation
 import ServiceManagement
 
 @MainActor
-public final class LaunchAtLoginManager {
+public protocol LaunchAtLoginManaging: AnyObject {
+    func isEnabled() -> Bool
+    func update(enabled: Bool) throws
+}
+
+@MainActor
+public final class LaunchAtLoginManager: LaunchAtLoginManaging {
     public static let shared = LaunchAtLoginManager()
 
     private init() {}

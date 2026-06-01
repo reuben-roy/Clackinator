@@ -2,12 +2,12 @@
 set -euo pipefail
 
 MODE="${1:-run}"
-APP_NAME="KeyTokDirect"
-SCHEME="KeyTokDirect"
-BUNDLE_ID="com.keytok.direct"
+APP_NAME="Clackinator"
+SCHEME="ClackinatorDirect"
+BUNDLE_ID="com.clackinator.direct"
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-PROJECT_PATH="$ROOT_DIR/KeyTok.xcodeproj"
+PROJECT_PATH="$ROOT_DIR/Clackinator.xcodeproj"
 DERIVED_DATA_PATH="$ROOT_DIR/build/DerivedData"
 APP_BUNDLE="$DERIVED_DATA_PATH/Build/Products/Debug/$APP_NAME.app"
 APP_BINARY="$APP_BUNDLE/Contents/MacOS/$APP_NAME"

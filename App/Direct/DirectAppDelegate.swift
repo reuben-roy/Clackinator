@@ -1,9 +1,9 @@
 import AppKit
-import KeyTokCore
+import ClackinatorCore
 
 @MainActor
 final class DirectAppDelegate: NSObject, NSApplicationDelegate {
-    let coordinator = KeyTokCoordinator(channel: .direct)
+    let coordinator = ClackinatorCoordinator(channel: .direct)
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         NSApp.setActivationPolicy(.accessory)

@@ -5,10 +5,10 @@ import SwiftUI
 public final class SettingsWindowController: NSWindowController, NSWindowDelegate {
     public var onClose: (() -> Void)?
 
-    public init(coordinator: KeyTokCoordinator) {
+    public init(coordinator: ClackinatorCoordinator) {
         let hostingController = NSHostingController(rootView: SettingsWindowView(coordinator: coordinator))
         let window = NSWindow(contentViewController: hostingController)
-        window.title = "KeyTok"
+        window.title = "Clackinator"
         window.styleMask = [.titled, .closable, .miniaturizable, .fullSizeContentView]
         window.setContentSize(NSSize(width: 560, height: 620))
         window.minSize = NSSize(width: 520, height: 540)

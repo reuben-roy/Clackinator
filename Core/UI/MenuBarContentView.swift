@@ -2,9 +2,9 @@ import AppKit
 import SwiftUI
 
 public struct MenuBarContentView: View {
-    @ObservedObject private var coordinator: KeyTokCoordinator
+    @ObservedObject private var coordinator: ClackinatorCoordinator
 
-    public init(coordinator: KeyTokCoordinator) {
+    public init(coordinator: ClackinatorCoordinator) {
         self.coordinator = coordinator
     }
 
@@ -12,7 +12,7 @@ public struct MenuBarContentView: View {
         VStack(alignment: .leading, spacing: 14) {
             HStack(alignment: .firstTextBaseline) {
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("KeyTok")
+                    Text("Clackinator")
                         .font(.system(size: 16, weight: .semibold, design: .rounded))
                     Text(coordinator.statusSummary)
                         .font(.caption)

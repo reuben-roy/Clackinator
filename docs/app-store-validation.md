@@ -1,10 +1,10 @@
 # App Store Validation Gate
 
 The App Store target is intentionally separate from the direct/Homebrew target.
-Before shipping `KeyTokAppStore`, validate these behaviors with a signed
+Before shipping `ClackinatorAppStore`, validate these behaviors with a signed
 sandboxed build on the latest public macOS release:
 
-1. Install the `KeyTokAppStore` target from Xcode or TestFlight-equivalent internal distribution.
+1. Install the `ClackinatorAppStore` target from Xcode or TestFlight-equivalent internal distribution.
 2. Launch the app and confirm the onboarding window explains the keyboard-access flow.
 3. Grant keyboard listening access when prompted.
 4. Type in TextEdit, Safari, Terminal, and another sandboxed third-party app.

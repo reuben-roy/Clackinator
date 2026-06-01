@@ -19,9 +19,9 @@ public enum KeyboardPermissionStatus: String, Sendable {
     public var summary: String {
         switch self {
         case .unknown:
-            return "Grant keyboard listening access so KeyTok can react to typing across your Mac."
+            return "Grant keyboard listening access so Clackinator can react to typing across your Mac."
         case .denied:
-            return "KeyTok can only react inside its own window until keyboard listening access is restored."
+            return "Clackinator can only react inside its own window until keyboard listening access is restored."
         case .granted:
             return "Global key listening is active."
         }

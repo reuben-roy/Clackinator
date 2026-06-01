@@ -26,8 +26,8 @@ jobs:
       - name: Test direct target
         run: |
           xcodebuild \
-            -project KeyTok.xcodeproj \
-            -scheme KeyTokDirect \
+            -project Clackinator.xcodeproj \
+            -scheme ClackinatorDirect \
             -destination "platform=macOS" \
             CODE_SIGNING_ALLOWED=NO \
             test
@@ -35,8 +35,8 @@ jobs:
       - name: Build App Store target
         run: |
           xcodebuild \
-            -project KeyTok.xcodeproj \
-            -scheme KeyTokAppStore \
+            -project Clackinator.xcodeproj \
+            -scheme ClackinatorAppStore \
             -destination "platform=macOS" \
             CODE_SIGNING_ALLOWED=NO \
             build

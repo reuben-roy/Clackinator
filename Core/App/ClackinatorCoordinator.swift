@@ -1,9 +1,10 @@
 import AppKit
 import Foundation
 import QuartzCore
+import UniformTypeIdentifiers
 
 @MainActor
-public final class KeyTokCoordinator: ObservableObject {
+public final class ClackinatorCoordinator: ObservableObject {
     private enum DefaultsKey {
         static let isEnabled = "isEnabled"
         static let selectedSoundPackID = "selectedSoundPackID"
@@ -19,7 +20,7 @@ public final class KeyTokCoordinator: ObservableObject {
         didSet {
             guard hasLoadedSettings else { return }
             defaults.set(isEnabled, forKey: DefaultsKey.isEnabled)
-            KeyTokLogger.app.info("Typing sounds enabled: \(self.isEnabled, privacy: .public)")
+            ClackinatorLogger.app.info("Typing sounds enabled: \(self.isEnabled, privacy: .public)")
         }
     }
 
@@ -57,13 +58,22 @@ public final class KeyTokCoordinator: ObservableObject {
     @Published public private(set) var permissionStatus: KeyboardPermissionStatus = .unknown
     @Published public private(set) var activeBackend: KeyboardCaptureBackend = .eventMonitor
     @Published public private(set) var launchAtLoginError: String?
+    @Published public private(set) var soundPackErrorMessage: String?
 
     public var availableSoundPacks: [SoundPack] {
-        audioEngine.availablePacks
+        soundPackCatalog.availablePacks
+    }
+
+    public var builtInSoundPacks: [SoundPack] {
+        soundPackCatalog.availableBuiltInPacks
+    }
+
+    public var customSoundPacks: [SoundPack] {
+        soundPackCatalog.availableCustomPacks
     }
 
     public var selectedSoundPack: SoundPack? {
-        availableSoundPacks.first(where: { $0.id == selectedSoundPackID })
+        soundPackCatalog.pack(id: selectedSoundPackID)
     }
 
     public var menuBarSymbolName: String {
@@ -90,14 +100,15 @@ public final class KeyTokCoordinator: ObservableObject {
         case .unknown:
             return "Open settings and grant keyboard access to hear other apps."
         case .denied:
-            return "Access is denied. KeyTok will only react inside its own window."
+            return "Access is denied. Clackinator will only react inside its own window."
         }
     }
 
     private let defaults: UserDefaults
     private let audioEngine: AudioPlaybackEngine
-    private let permissionManager: KeyboardPermissionManager
-    private let launchAtLoginManager: LaunchAtLoginManager
+    private let soundPackCatalog: SoundPackCatalog
+    private let permissionManager: any KeyboardPermissionManaging
+    private let launchAtLoginManager: any LaunchAtLoginManaging
     private var keyboardEventSource: (any KeyboardEventSource)?
     private var settingsWindowController: SettingsWindowController?
     private var hasLoadedSettings = false
@@ -106,33 +117,38 @@ public final class KeyTokCoordinator: ObservableObject {
         channel: AppChannel,
         defaults: UserDefaults = .standard,
         audioEngine providedAudioEngine: AudioPlaybackEngine? = nil,
-        permissionManager: KeyboardPermissionManager? = nil,
-        launchAtLoginManager: LaunchAtLoginManager? = nil
+        soundPackCatalog providedSoundPackCatalog: SoundPackCatalog? = nil,
+        permissionManager: (any KeyboardPermissionManaging)? = nil,
+        launchAtLoginManager: (any LaunchAtLoginManaging)? = nil
     ) {
-        let resolvedAudioEngine = providedAudioEngine ?? AudioPlaybackEngine()
-        let resolvedPermissionManager = permissionManager ?? .shared
-        let resolvedLaunchAtLoginManager = launchAtLoginManager ?? .shared
+        let resolvedSoundPackCatalog = providedSoundPackCatalog ?? SoundPackCatalog()
+        let resolvedAudioEngine = providedAudioEngine ?? AudioPlaybackEngine(packs: resolvedSoundPackCatalog.availablePacks)
+        let resolvedPermissionManager = permissionManager ?? KeyboardPermissionManager.shared
+        let resolvedLaunchAtLoginManager = launchAtLoginManager ?? LaunchAtLoginManager.shared
 
         self.channel = channel
         self.defaults = defaults
         self.audioEngine = resolvedAudioEngine
+        self.soundPackCatalog = resolvedSoundPackCatalog
         self.permissionManager = resolvedPermissionManager
         self.launchAtLoginManager = resolvedLaunchAtLoginManager
 
-        let soundPackID = defaults.string(forKey: DefaultsKey.selectedSoundPackID) ?? SoundPackLibrary.all.first?.id ?? "linear"
+        let savedSoundPackID = defaults.string(forKey: DefaultsKey.selectedSoundPackID)
+            ?? resolvedSoundPackCatalog.availablePacks.first?.id
+            ?? "linear"
         let savedVolume = defaults.object(forKey: DefaultsKey.masterVolume) as? Double ?? 0.74
         let savedEnabled = defaults.object(forKey: DefaultsKey.isEnabled) as? Bool ?? true
         let storedLaunchAtLogin = defaults.object(forKey: DefaultsKey.launchAtLoginEnabled) as? Bool
         let actualLaunchAtLogin = resolvedLaunchAtLoginManager.isEnabled()
 
         isEnabled = savedEnabled
-        selectedSoundPackID = soundPackID
+        selectedSoundPackID = savedSoundPackID
         masterVolume = savedVolume
         launchAtLoginEnabled = storedLaunchAtLogin ?? actualLaunchAtLogin
         hasCompletedOnboarding = defaults.object(forKey: DefaultsKey.hasCompletedOnboarding) as? Bool ?? false
 
         hasLoadedSettings = true
-        resolvedAudioEngine.activatePack(id: soundPackID)
+        _ = reloadSoundPacks(preferredSelection: savedSoundPackID)
         resolvedAudioEngine.setMasterVolume(savedVolume)
         refreshPermissionStatus()
     }
@@ -162,12 +178,44 @@ public final class KeyTokCoordinator: ObservableObject {
         defaults.set(true, forKey: DefaultsKey.hasRequestedKeyboardPermission)
         let granted = permissionManager.requestAccess()
         permissionStatus = granted ? .granted : .denied
-        KeyTokLogger.permissions.info("Keyboard access requested. Granted: \(granted, privacy: .public)")
+        ClackinatorLogger.permissions.info("Keyboard access requested. Granted: \(granted, privacy: .public)")
         restartKeyboardEventSource()
     }
 
     public func openPrivacySettings() {
         permissionManager.openSystemSettings()
+    }
+
+    public func importCustomSoundPack() {
+        let panel = NSOpenPanel()
+        panel.title = "Import Keyboard Audio"
+        panel.message = "Choose one MP3, M4A, WAV, or AIFF file to slice into a custom sound pack."
+        panel.allowedContentTypes = [.mp3, .mpeg4Audio, .wav, .aiff]
+        panel.allowsMultipleSelection = false
+        panel.canChooseFiles = true
+        panel.canChooseDirectories = false
+        panel.resolvesAliases = true
+
+        NSApp.activate(ignoringOtherApps: true)
+        panel.begin { [weak self] response in
+            guard response == .OK, let sourceURL = panel.url else { return }
+
+            Task { @MainActor [weak self] in
+                self?.finishImport(from: sourceURL)
+            }
+        }
+    }
+
+    public func deleteCustomSoundPack(id: String) {
+        do {
+            try soundPackCatalog.deletePack(id: id)
+            let preferredSelection = selectedSoundPackID == id ? builtInSoundPacks.first?.id : selectedSoundPackID
+            _ = reloadSoundPacks(preferredSelection: preferredSelection)
+            soundPackErrorMessage = nil
+        } catch {
+            soundPackErrorMessage = error.localizedDescription
+            ClackinatorLogger.audio.error("Failed to delete custom sound pack \(id, privacy: .public): \(error.localizedDescription, privacy: .public)")
+        }
     }
 
     public func previewSelectedSoundPack() {
@@ -205,6 +253,38 @@ public final class KeyTokCoordinator: ObservableObject {
         keyboardEventSource = nil
     }
 
+    @discardableResult
+    private func reloadSoundPacks(preferredSelection: String? = nil) -> String {
+        soundPackCatalog.reload()
+
+        let packs = soundPackCatalog.availablePacks
+        let resolvedSelection = packs.first(where: { $0.id == (preferredSelection ?? selectedSoundPackID) })?.id
+            ?? builtInSoundPacks.first?.id
+            ?? packs.first?.id
+            ?? "linear"
+
+        audioEngine.replacePacks(packs, selecting: resolvedSelection)
+
+        if selectedSoundPackID != resolvedSelection {
+            selectedSoundPackID = resolvedSelection
+        } else {
+            audioEngine.activatePack(id: resolvedSelection)
+        }
+
+        return resolvedSelection
+    }
+
+    private func finishImport(from sourceURL: URL) {
+        do {
+            let pack = try soundPackCatalog.importPack(from: sourceURL)
+            _ = reloadSoundPacks(preferredSelection: pack.id)
+            soundPackErrorMessage = nil
+        } catch {
+            soundPackErrorMessage = error.localizedDescription
+            ClackinatorLogger.audio.error("Failed to import custom sound pack: \(error.localizedDescription, privacy: .public)")
+        }
+    }
+
     private func restartKeyboardEventSource() {
         keyboardEventSource?.stop()
         keyboardEventSource = KeyboardEventSourceFactory.make(
@@ -215,7 +295,7 @@ public final class KeyTokCoordinator: ObservableObject {
         }
 
         activeBackend = keyboardEventSource?.backend ?? .eventMonitor
-        KeyTokLogger.input.info("Keyboard backend active: \(self.activeBackend.rawValue, privacy: .public)")
+        ClackinatorLogger.input.info("Keyboard backend active: \(self.activeBackend.rawValue, privacy: .public)")
     }
 
     private func handleKeyEvent(_ keyEvent: KeyEvent) {
@@ -232,7 +312,7 @@ public final class KeyTokCoordinator: ObservableObject {
             launchAtLoginError = nil
         } catch {
             launchAtLoginError = error.localizedDescription
-            KeyTokLogger.app.error("Launch at login update failed: \(error.localizedDescription, privacy: .public)")
+            ClackinatorLogger.app.error("Launch at login update failed: \(error.localizedDescription, privacy: .public)")
         }
     }
 }

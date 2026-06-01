@@ -11,32 +11,48 @@ public final class AudioPlaybackEngine {
 
     private let engine = AVAudioEngine()
     private let classifier = KeyClassifier()
+    private let fallbackPack = SoundPack(
+        id: "fallback",
+        name: "Fallback",
+        summary: "Fallback preset.",
+        gain: 1.0,
+        pitchJitterRange: 0...0,
+        sampleGroups: [:]
+    )
     private var playerSlots: [PlayerSlot] = []
+    private var packIndex: [String: SoundPack] = [:]
     private var currentPack: SoundPack
     private var masterVolume: Double = 0.72
 
-    public init(poolSize: Int = 14) {
-        currentPack = SoundPackLibrary.all.first ?? SoundPack(
-            id: "fallback",
-            name: "Fallback",
-            summary: "Fallback preset.",
-            gain: 1.0,
-            pitchJitterRange: 0...0,
-            sampleGroups: [:]
-        )
+    public init(packs: [SoundPack] = SoundPackLibrary.all, poolSize: Int = 14) {
+        currentPack = packs.first ?? fallbackPack
+        packIndex = Dictionary(uniqueKeysWithValues: packs.map { ($0.id, $0) })
 
         configureEngine(poolSize: poolSize)
         activatePack(id: currentPack.id)
     }
 
     public var availablePacks: [SoundPack] {
-        SoundPackLibrary.all
+        packIndex.values.sorted { lhs, rhs in
+            if lhs.isBuiltIn != rhs.isBuiltIn {
+                return lhs.isBuiltIn
+            }
+
+            return lhs.name.localizedCaseInsensitiveCompare(rhs.name) == .orderedAscending
+        }
+    }
+
+    public func replacePacks(_ packs: [SoundPack], selecting preferredID: String? = nil) {
+        packIndex = Dictionary(uniqueKeysWithValues: packs.map { ($0.id, $0) })
+        let targetID = preferredID ?? currentPack.id
+        currentPack = packIndex[targetID] ?? packs.first ?? fallbackPack
+        ClackinatorLogger.audio.info("Available sound packs updated: \(self.packIndex.count, privacy: .public)")
     }
 
     public func activatePack(id: String) {
-        if let pack = SoundPackLibrary.pack(id: id) {
+        if let pack = packIndex[id] {
             currentPack = pack
-            KeyTokLogger.audio.info("Activated sound pack: \(pack.name, privacy: .public)")
+            ClackinatorLogger.audio.info("Activated sound pack: \(pack.name, privacy: .public)")
         }
     }
 
@@ -98,7 +114,7 @@ public final class AudioPlaybackEngine {
             }
             try engine.start()
         } catch {
-            KeyTokLogger.audio.error("Failed to start audio engine: \(error.localizedDescription, privacy: .public)")
+            ClackinatorLogger.audio.error("Failed to start audio engine: \(error.localizedDescription, privacy: .public)")
         }
     }
 

@@ -1,9 +1,9 @@
 import Foundation
 import OSLog
 
-public enum KeyTokLogger {
+public enum ClackinatorLogger {
     private static var subsystem: String {
-        Bundle.main.bundleIdentifier ?? "com.keytok.runtime"
+        Bundle.main.bundleIdentifier ?? "com.clackinator.runtime"
     }
 
     public static let app = Logger(subsystem: subsystem, category: "app")

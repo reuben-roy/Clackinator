@@ -7,9 +7,9 @@ public enum AppChannel: String, CaseIterable, Sendable {
     public var bundleIdentifier: String {
         switch self {
         case .direct:
-            return "com.keytok.direct"
+            return "com.clackinator.direct"
         case .appStore:
-            return "com.keytok.appstore"
+            return "com.clackinator.appstore"
         }
     }
 
@@ -43,7 +43,7 @@ public enum KeyboardCaptureBackend: String, Sendable {
     public var summary: String {
         switch self {
         case .eventMonitor:
-            return "Uses AppKit event monitors. Works inside KeyTok and can hear other apps after keyboard access is granted."
+            return "Uses AppKit event monitors. Works inside Clackinator and can hear other apps after keyboard access is granted."
         case .eventTap:
             return "Uses a listen-only Quartz event tap for tighter global capture in the direct build."
         }

@@ -1,0 +1,1085 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		010CCC6B1881E1FDD4B989C5 /* KeyClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567097B88551E40E1D12B8F /* KeyClassifier.swift */; };
+		020E6CCE638A63C7D17BA019 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FCBEE07FF6B6EC2D81972D7 /* Cocoa.framework */; };
+		03B98C00EE4FD42B123CCDBE /* workbench-keyboard-typing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B60C3856A972B60B430682A /* workbench-keyboard-typing.mp3 */; };
+		07F71115F3B41A18E3AA8442 /* ClackinatorCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E14E808B77B314EBE03B443 /* ClackinatorCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0992799FAAEB499307487E96 /* burst-fast-typing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F7BAAABCBA25E95331D6F7BE /* burst-fast-typing.mp3 */; };
+		0BD3D8A104F9A37ECE517AAD /* AppChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AFC0B670745E8B3E6ED33B /* AppChannel.swift */; };
+		0F3187F54F1EAACD6D272A90 /* KeyboardEventSourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154A44D7E7D6F965BAB5EFD7 /* KeyboardEventSourceFactory.swift */; };
+		1EDDE3A9B51315E1EA376F65 /* KeyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269172F125ABB5EFC1B76DD7 /* KeyClass.swift */; };
+		229CE98FC1D9CAF0833004CC /* AppStoreAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90902099C1051DA74EF1AE0F /* AppStoreAppDelegate.swift */; };
+		2A0619C2233FC45DF393EBFB /* SettingsWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304D1025DCD5866D8CF3C0F /* SettingsWindowView.swift */; };
+		320300EEE4D31F8DFFA35EA4 /* CustomSoundPackStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EF1C4BA7CD42B5671BE216 /* CustomSoundPackStoreTests.swift */; };
+		350032DF247843AE2BBF8CF7 /* SettingsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8BC16205BC2560B9E1510D /* SettingsWindowController.swift */; };
+		3C14D73F8E3F7BC7114D2592 /* workbench-old-computer-typing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01E942AB0849B92A19785285 /* workbench-old-computer-typing.mp3 */; };
+		3C2E15204706887753B722E3 /* ClackinatorCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E14E808B77B314EBE03B443 /* ClackinatorCore.framework */; };
+		3C8E8F72231263BF68A336AC /* EventTapKeyboardEventSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D763630D816BCA49C3EC07 /* EventTapKeyboardEventSource.swift */; };
+		3FA014BC4E5B024F732E5BD5 /* ClackinatorCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E14E808B77B314EBE03B443 /* ClackinatorCore.framework */; };
+		40F0CE7459B61BB1C19F1DA0 /* MenuBarLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C5E778C521E5F173BF3B66 /* MenuBarLabelView.swift */; };
+		4BE8666DB8AAC98523335F91 /* DirectAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B609449CB53FFAE96E96993F /* DirectAppDelegate.swift */; };
+		546A25D376785A20B6956556 /* MonitorKeyboardEventSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C3E90E3A1993DC94CEA7D7 /* MonitorKeyboardEventSource.swift */; };
+		567C918D63AB9218A04BF8B5 /* burst-keyboard-clacking.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC49B1908D0E41612A0702C1 /* burst-keyboard-clacking.mp3 */; };
+		63227EFD9A68D1E7486CAC81 /* KeyboardPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5F5F6E1CA757F040B5F375 /* KeyboardPermissionManager.swift */; };
+		65EE37A38624D3CCB96F04ED /* SoundSynthesis.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16B51CC480246B14A5CC7B8 /* SoundSynthesis.swift */; };
+		6613995D390AB89B834F9012 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FCBEE07FF6B6EC2D81972D7 /* Cocoa.framework */; };
+		6883E0592EA39E6CF279D999 /* CustomSoundPackStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A6FFF8B5C56CC7529C4D59 /* CustomSoundPackStore.swift */; };
+		7070FE47DBA282FAB63DBAE8 /* SoundPackLibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C562B2A88CCA1613BD3973 /* SoundPackLibraryTests.swift */; };
+		855F136C84EFEAB6B3C92603 /* LaunchAtLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CBC0D6B098C7B529AD0BE6 /* LaunchAtLoginManager.swift */; };
+		930DEA141491F8B61310AE11 /* SampledSoundPackRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567AD029B94C17B77EDDC56 /* SampledSoundPackRenderer.swift */; };
+		94611B1844E1AA60BF56DD99 /* KeyboardEventSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF73446BF7ECEAE7E0E9162 /* KeyboardEventSource.swift */; };
+		973BAAB171C970F619A2A5BA /* ClackinatorCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E14E808B77B314EBE03B443 /* ClackinatorCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9B0F95C06CF25F8534F11D5D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FCBEE07FF6B6EC2D81972D7 /* Cocoa.framework */; };
+		9B6FB280C9B31B474D920F6C /* ClackinatorAppStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EBA40E429E62A6E7A4547A /* ClackinatorAppStoreApp.swift */; };
+		9CAB73288FC707ACEE7583B9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FCBEE07FF6B6EC2D81972D7 /* Cocoa.framework */; };
+		A31F77C97AE9ED758BC1EF62 /* ClackinatorCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0926632C5783610544D4DC0 /* ClackinatorCoordinator.swift */; };
+		B7E81841F7C28AEF9810AAFB /* ClackinatorDirectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12942C94881213333759B9B1 /* ClackinatorDirectApp.swift */; };
+		BBF7B018CFA6B76DB2B66AA0 /* SoundPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF192D20E3616D75CE31F18B /* SoundPack.swift */; };
+		BDCA5ABFD16422B6B0814045 /* KeyboardPermissionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB033C4D1593D57AC91941 /* KeyboardPermissionStatus.swift */; };
+		C0B470A8A964F741878BF92F /* SoundPackCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D83D140B6A6BBCD5AE39EB7 /* SoundPackCatalog.swift */; };
+		C2B38A18E9010E4FF0D09254 /* MenuBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A58B1E549F31D215A5A4FA8 /* MenuBarContentView.swift */; };
+		C84AC1A55692391F31CF1436 /* ClackinatorLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C592A48045F0333DDF5D19D /* ClackinatorLogger.swift */; };
+		D2A364B837015B12ED897B70 /* SampledSoundPackRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11639CC3BAC6E3EED5B141 /* SampledSoundPackRendererTests.swift */; };
+		D9366BAB1074A9DA2F757DE1 /* AudioPlaybackEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063B37508604230BFF4A2963 /* AudioPlaybackEngine.swift */; };
+		DCA6CFBA7E19604228FA468A /* AudioTestSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7277F5F40936BF76D6EA456A /* AudioTestSupport.swift */; };
+		E8CE33DF47B65F83CD2042FE /* KeyClassifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11993F4364B538672C0E03E /* KeyClassifierTests.swift */; };
+		EF1BC65B088CD2A40BAC2E97 /* workbench-hard-keyboard.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 804778800F445FD503BB64A2 /* workbench-hard-keyboard.mp3 */; };
+		F194BBC3EB11EFD19015A549 /* burst-typing-burst.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C2524E93CE2DA90BCB21BE3D /* burst-typing-burst.mp3 */; };
+		F4D38A4C0411F1F965B14669 /* SoundPackLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF878314B29EC9E0FB4EBF8 /* SoundPackLibrary.swift */; };
+		F62962FDFF067EC5794E6B4C /* ClackinatorCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A257C9ED37843B8145D94 /* ClackinatorCoordinatorTests.swift */; };
+		FCA6E16293796FB98C3662F8 /* ClackinatorCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E14E808B77B314EBE03B443 /* ClackinatorCore.framework */; };
+		FFD0D54859AD7C19279D9E9F /* KeyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A89BDB64A0A94481B23BF85 /* KeyEvent.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7A61DE374E17556B6BD442FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA8F17CFA5E1C1606DF19E2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29DB365A7382032B09F01E6B;
+			remoteInfo = ClackinatorCore;
+		};
+		7D2D36448E9F7689C3E7115A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA8F17CFA5E1C1606DF19E2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29DB365A7382032B09F01E6B;
+			remoteInfo = ClackinatorCore;
+		};
+		B3ED31CCAAE21E22B0458094 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA8F17CFA5E1C1606DF19E2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29DB365A7382032B09F01E6B;
+			remoteInfo = ClackinatorCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1B5CD30E0843839216B59DC1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				973BAAB171C970F619A2A5BA /* ClackinatorCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9563A697E806F2606ADBF59A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				07F71115F3B41A18E3AA8442 /* ClackinatorCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		01E942AB0849B92A19785285 /* workbench-old-computer-typing.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = "workbench-old-computer-typing.mp3"; sourceTree = "<group>"; };
+		063B37508604230BFF4A2963 /* AudioPlaybackEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudioPlaybackEngine.swift; sourceTree = "<group>"; };
+		12942C94881213333759B9B1 /* ClackinatorDirectApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClackinatorDirectApp.swift; sourceTree = "<group>"; };
+		154A44D7E7D6F965BAB5EFD7 /* KeyboardEventSourceFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyboardEventSourceFactory.swift; sourceTree = "<group>"; };
+		195FBA3C0E9D809A4CCDA9FF /* Clackinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clackinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C592A48045F0333DDF5D19D /* ClackinatorLogger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClackinatorLogger.swift; sourceTree = "<group>"; };
+		26201ACA0BA6F01D35DEAE4D /* ClackinatorAppStore.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = ClackinatorAppStore.entitlements; sourceTree = "<group>"; };
+		269172F125ABB5EFC1B76DD7 /* KeyClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyClass.swift; sourceTree = "<group>"; };
+		26C3E90E3A1993DC94CEA7D7 /* MonitorKeyboardEventSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MonitorKeyboardEventSource.swift; sourceTree = "<group>"; };
+		2A89BDB64A0A94481B23BF85 /* KeyEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyEvent.swift; sourceTree = "<group>"; };
+		2B5F5814508AF4DCFF171607 /* ClackinatorDirect-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ClackinatorDirect-Info.plist"; sourceTree = "<group>"; };
+		37D763630D816BCA49C3EC07 /* EventTapKeyboardEventSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventTapKeyboardEventSource.swift; sourceTree = "<group>"; };
+		38CBC0D6B098C7B529AD0BE6 /* LaunchAtLoginManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginManager.swift; sourceTree = "<group>"; };
+		3A58B1E549F31D215A5A4FA8 /* MenuBarContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MenuBarContentView.swift; sourceTree = "<group>"; };
+		3FCBEE07FF6B6EC2D81972D7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		60C5E778C521E5F173BF3B66 /* MenuBarLabelView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MenuBarLabelView.swift; sourceTree = "<group>"; };
+		649648153D6A93D21F156DBF /* ci.yml */ = {isa = PBXFileReference; includeInIndex = 1; path = ci.yml; sourceTree = "<group>"; };
+		6D5F5F6E1CA757F040B5F375 /* KeyboardPermissionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyboardPermissionManager.swift; sourceTree = "<group>"; };
+		6E14E808B77B314EBE03B443 /* ClackinatorCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClackinatorCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7277F5F40936BF76D6EA456A /* AudioTestSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudioTestSupport.swift; sourceTree = "<group>"; };
+		761FEDF20DBC42128CA23C51 /* generate_xcodeproj.rb */ = {isa = PBXFileReference; includeInIndex = 1; path = generate_xcodeproj.rb; sourceTree = "<group>"; };
+		78A883298A0FA8C7A813FA0F /* ClackinatorCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClackinatorCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78AFC0B670745E8B3E6ED33B /* AppChannel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppChannel.swift; sourceTree = "<group>"; };
+		804778800F445FD503BB64A2 /* workbench-hard-keyboard.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = "workbench-hard-keyboard.mp3"; sourceTree = "<group>"; };
+		80EF2523EF72D304F6EE90DD /* render_homebrew_cask.rb */ = {isa = PBXFileReference; includeInIndex = 1; path = render_homebrew_cask.rb; sourceTree = "<group>"; };
+		82A6FFF8B5C56CC7529C4D59 /* CustomSoundPackStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomSoundPackStore.swift; sourceTree = "<group>"; };
+		8309029EEC92179003985B86 /* Clackinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clackinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B60C3856A972B60B430682A /* workbench-keyboard-typing.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = "workbench-keyboard-typing.mp3"; sourceTree = "<group>"; };
+		8CF73446BF7ECEAE7E0E9162 /* KeyboardEventSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyboardEventSource.swift; sourceTree = "<group>"; };
+		8D83D140B6A6BBCD5AE39EB7 /* SoundPackCatalog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SoundPackCatalog.swift; sourceTree = "<group>"; };
+		90902099C1051DA74EF1AE0F /* AppStoreAppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppStoreAppDelegate.swift; sourceTree = "<group>"; };
+		94EF1C4BA7CD42B5671BE216 /* CustomSoundPackStoreTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomSoundPackStoreTests.swift; sourceTree = "<group>"; };
+		A0DA6E02B9E74456B6694367 /* app-store-validation.md */ = {isa = PBXFileReference; includeInIndex = 1; path = "app-store-validation.md"; sourceTree = "<group>"; };
+		A11993F4364B538672C0E03E /* KeyClassifierTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyClassifierTests.swift; sourceTree = "<group>"; };
+		A304D1025DCD5866D8CF3C0F /* SettingsWindowView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsWindowView.swift; sourceTree = "<group>"; };
+		A9D3AEF5C979925C9D660132 /* package_direct_release.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = package_direct_release.sh; sourceTree = "<group>"; };
+		AB563A9D3B69A7D912765B35 /* release.md */ = {isa = PBXFileReference; includeInIndex = 1; path = release.md; sourceTree = "<group>"; };
+		AF3C2A44152F25A8FBCD3E58 /* build_and_run.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = build_and_run.sh; sourceTree = "<group>"; };
+		B567AD029B94C17B77EDDC56 /* SampledSoundPackRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SampledSoundPackRenderer.swift; sourceTree = "<group>"; };
+		B609449CB53FFAE96E96993F /* DirectAppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DirectAppDelegate.swift; sourceTree = "<group>"; };
+		B8C562B2A88CCA1613BD3973 /* SoundPackLibraryTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SoundPackLibraryTests.swift; sourceTree = "<group>"; };
+		C16B51CC480246B14A5CC7B8 /* SoundSynthesis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SoundSynthesis.swift; sourceTree = "<group>"; };
+		C2524E93CE2DA90BCB21BE3D /* burst-typing-burst.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = "burst-typing-burst.mp3"; sourceTree = "<group>"; };
+		CB8BC16205BC2560B9E1510D /* SettingsWindowController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsWindowController.swift; sourceTree = "<group>"; };
+		D0926632C5783610544D4DC0 /* ClackinatorCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClackinatorCoordinator.swift; sourceTree = "<group>"; };
+		D567097B88551E40E1D12B8F /* KeyClassifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyClassifier.swift; sourceTree = "<group>"; };
+		D8816007033686B413D8577C /* direct-release.yml */ = {isa = PBXFileReference; includeInIndex = 1; path = "direct-release.yml"; sourceTree = "<group>"; };
+		DAF878314B29EC9E0FB4EBF8 /* SoundPackLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SoundPackLibrary.swift; sourceTree = "<group>"; };
+		DC49B1908D0E41612A0702C1 /* burst-keyboard-clacking.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = "burst-keyboard-clacking.mp3"; sourceTree = "<group>"; };
+		DF11639CC3BAC6E3EED5B141 /* SampledSoundPackRendererTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SampledSoundPackRendererTests.swift; sourceTree = "<group>"; };
+		E0EBA40E429E62A6E7A4547A /* ClackinatorAppStoreApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClackinatorAppStoreApp.swift; sourceTree = "<group>"; };
+		E7EB033C4D1593D57AC91941 /* KeyboardPermissionStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyboardPermissionStatus.swift; sourceTree = "<group>"; };
+		EC0132415471DE8BC84F25D2 /* ClackinatorAppStore-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ClackinatorAppStore-Info.plist"; sourceTree = "<group>"; };
+		EF192D20E3616D75CE31F18B /* SoundPack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SoundPack.swift; sourceTree = "<group>"; };
+		F7BAAABCBA25E95331D6F7BE /* burst-fast-typing.mp3 */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.mp3; path = "burst-fast-typing.mp3"; sourceTree = "<group>"; };
+		FA3A257C9ED37843B8145D94 /* ClackinatorCoordinatorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClackinatorCoordinatorTests.swift; sourceTree = "<group>"; };
+		FCA007C985D4B9C2110813C9 /* clackinator.rb.erb */ = {isa = PBXFileReference; includeInIndex = 1; path = clackinator.rb.erb; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B4C86866EEE3D4227BB0CAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6613995D390AB89B834F9012 /* Cocoa.framework in Frameworks */,
+				3C2E15204706887753B722E3 /* ClackinatorCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D38806CCAD478D0A510A27A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B0F95C06CF25F8534F11D5D /* Cocoa.framework in Frameworks */,
+				FCA6E16293796FB98C3662F8 /* ClackinatorCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E52C558DAE3386553F4CBBB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				020E6CCE638A63C7D17BA019 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED18957DF9F68D891E434665 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CAB73288FC707ACEE7583B9 /* Cocoa.framework in Frameworks */,
+				3FA014BC4E5B024F732E5BD5 /* ClackinatorCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0621F3036A5A66C00323E5F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09591FB6E1BD53A1CBBEB3C8 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		09591FB6E1BD53A1CBBEB3C8 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				3FCBEE07FF6B6EC2D81972D7 /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		11467AD9724C1CC930D1158F /* workflows */ = {
+			isa = PBXGroup;
+			children = (
+				649648153D6A93D21F156DBF /* ci.yml */,
+				D8816007033686B413D8577C /* direct-release.yml */,
+			);
+			name = workflows;
+			path = workflows;
+			sourceTree = "<group>";
+		};
+		14EAEA4A6775B2FBD4217858 /* Direct */ = {
+			isa = PBXGroup;
+			children = (
+				B609449CB53FFAE96E96993F /* DirectAppDelegate.swift */,
+				12942C94881213333759B9B1 /* ClackinatorDirectApp.swift */,
+			);
+			name = Direct;
+			path = Direct;
+			sourceTree = "<group>";
+		};
+		18DB1D6B3FB2C87AC3321F22 /* .github */ = {
+			isa = PBXGroup;
+			children = (
+				11467AD9724C1CC930D1158F /* workflows */,
+			);
+			name = .github;
+			path = .github;
+			sourceTree = "<group>";
+		};
+		2EB04C9B62DBC7BC6D3E49F5 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				6D5F5F6E1CA757F040B5F375 /* KeyboardPermissionManager.swift */,
+				E7EB033C4D1593D57AC91941 /* KeyboardPermissionStatus.swift */,
+				1C592A48045F0333DDF5D19D /* ClackinatorLogger.swift */,
+				38CBC0D6B098C7B529AD0BE6 /* LaunchAtLoginManager.swift */,
+			);
+			name = Support;
+			path = Support;
+			sourceTree = "<group>";
+		};
+		3048FC63AC1A7E0E63AD05C1 = {
+			isa = PBXGroup;
+			children = (
+				38A39C122A15E8B2F39CA6BD /* Products */,
+				0621F3036A5A66C00323E5F0 /* Frameworks */,
+				A01B36D0CA8E889565DDC237 /* App */,
+				E046CD183ECDFD519E9C77C4 /* Core */,
+				C81373D18088236DED1FC09C /* Tests */,
+				EBD29E162882550EB3E1AF12 /* Config */,
+				70C04CC100F9BEE49D798A2E /* script */,
+				EA5281D08AFC2845C52257C8 /* docs */,
+				18DB1D6B3FB2C87AC3321F22 /* .github */,
+				631A1231A8C330347313E098 /* Homebrew */,
+			);
+			sourceTree = "<group>";
+		};
+		38A39C122A15E8B2F39CA6BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				195FBA3C0E9D809A4CCDA9FF /* Clackinator.app */,
+				8309029EEC92179003985B86 /* Clackinator.app */,
+				6E14E808B77B314EBE03B443 /* ClackinatorCore.framework */,
+				78A883298A0FA8C7A813FA0F /* ClackinatorCoreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4599B137B7C3382511117AC1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F7BAAABCBA25E95331D6F7BE /* burst-fast-typing.mp3 */,
+				DC49B1908D0E41612A0702C1 /* burst-keyboard-clacking.mp3 */,
+				C2524E93CE2DA90BCB21BE3D /* burst-typing-burst.mp3 */,
+				804778800F445FD503BB64A2 /* workbench-hard-keyboard.mp3 */,
+				8B60C3856A972B60B430682A /* workbench-keyboard-typing.mp3 */,
+				01E942AB0849B92A19785285 /* workbench-old-computer-typing.mp3 */,
+			);
+			name = Resources;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5733E32C9D4116E7192F6BAD /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				37D763630D816BCA49C3EC07 /* EventTapKeyboardEventSource.swift */,
+				D567097B88551E40E1D12B8F /* KeyClassifier.swift */,
+				8CF73446BF7ECEAE7E0E9162 /* KeyboardEventSource.swift */,
+				154A44D7E7D6F965BAB5EFD7 /* KeyboardEventSourceFactory.swift */,
+				26C3E90E3A1993DC94CEA7D7 /* MonitorKeyboardEventSource.swift */,
+			);
+			name = Input;
+			path = Input;
+			sourceTree = "<group>";
+		};
+		631A1231A8C330347313E098 /* Homebrew */ = {
+			isa = PBXGroup;
+			children = (
+				EE5BB867DC8F2C2527F91407 /* Casks */,
+			);
+			name = Homebrew;
+			path = Homebrew;
+			sourceTree = "<group>";
+		};
+		70C04CC100F9BEE49D798A2E /* script */ = {
+			isa = PBXGroup;
+			children = (
+				AF3C2A44152F25A8FBCD3E58 /* build_and_run.sh */,
+				761FEDF20DBC42128CA23C51 /* generate_xcodeproj.rb */,
+				A9D3AEF5C979925C9D660132 /* package_direct_release.sh */,
+				80EF2523EF72D304F6EE90DD /* render_homebrew_cask.rb */,
+			);
+			name = script;
+			path = script;
+			sourceTree = "<group>";
+		};
+		870E06065DDEFAC35F900517 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				78AFC0B670745E8B3E6ED33B /* AppChannel.swift */,
+				269172F125ABB5EFC1B76DD7 /* KeyClass.swift */,
+				2A89BDB64A0A94481B23BF85 /* KeyEvent.swift */,
+			);
+			name = Models;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		97CCDF3882038EDFA90C35F0 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				4599B137B7C3382511117AC1 /* Resources */,
+				063B37508604230BFF4A2963 /* AudioPlaybackEngine.swift */,
+				82A6FFF8B5C56CC7529C4D59 /* CustomSoundPackStore.swift */,
+				B567AD029B94C17B77EDDC56 /* SampledSoundPackRenderer.swift */,
+				EF192D20E3616D75CE31F18B /* SoundPack.swift */,
+				8D83D140B6A6BBCD5AE39EB7 /* SoundPackCatalog.swift */,
+				DAF878314B29EC9E0FB4EBF8 /* SoundPackLibrary.swift */,
+				C16B51CC480246B14A5CC7B8 /* SoundSynthesis.swift */,
+			);
+			name = Audio;
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		9CCB9E061D000C30F1D08A35 /* AppStore */ = {
+			isa = PBXGroup;
+			children = (
+				90902099C1051DA74EF1AE0F /* AppStoreAppDelegate.swift */,
+				E0EBA40E429E62A6E7A4547A /* ClackinatorAppStoreApp.swift */,
+			);
+			name = AppStore;
+			path = AppStore;
+			sourceTree = "<group>";
+		};
+		A01B36D0CA8E889565DDC237 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				14EAEA4A6775B2FBD4217858 /* Direct */,
+				9CCB9E061D000C30F1D08A35 /* AppStore */,
+			);
+			name = App;
+			path = App;
+			sourceTree = "<group>";
+		};
+		C429CEBF95354C0A376DD64C /* ClackinatorCoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				7277F5F40936BF76D6EA456A /* AudioTestSupport.swift */,
+				94EF1C4BA7CD42B5671BE216 /* CustomSoundPackStoreTests.swift */,
+				A11993F4364B538672C0E03E /* KeyClassifierTests.swift */,
+				FA3A257C9ED37843B8145D94 /* ClackinatorCoordinatorTests.swift */,
+				DF11639CC3BAC6E3EED5B141 /* SampledSoundPackRendererTests.swift */,
+				B8C562B2A88CCA1613BD3973 /* SoundPackLibraryTests.swift */,
+			);
+			name = ClackinatorCoreTests;
+			path = ClackinatorCoreTests;
+			sourceTree = "<group>";
+		};
+		C81373D18088236DED1FC09C /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C429CEBF95354C0A376DD64C /* ClackinatorCoreTests */,
+			);
+			name = Tests;
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		E046CD183ECDFD519E9C77C4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EF08DBC129562070D128DFD4 /* App */,
+				97CCDF3882038EDFA90C35F0 /* Audio */,
+				5733E32C9D4116E7192F6BAD /* Input */,
+				870E06065DDEFAC35F900517 /* Models */,
+				2EB04C9B62DBC7BC6D3E49F5 /* Support */,
+				F808B08F6279EF0039C15A91 /* UI */,
+			);
+			name = Core;
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EA5281D08AFC2845C52257C8 /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				A0DA6E02B9E74456B6694367 /* app-store-validation.md */,
+				AB563A9D3B69A7D912765B35 /* release.md */,
+			);
+			name = docs;
+			path = docs;
+			sourceTree = "<group>";
+		};
+		EBD29E162882550EB3E1AF12 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				EC0132415471DE8BC84F25D2 /* ClackinatorAppStore-Info.plist */,
+				26201ACA0BA6F01D35DEAE4D /* ClackinatorAppStore.entitlements */,
+				2B5F5814508AF4DCFF171607 /* ClackinatorDirect-Info.plist */,
+			);
+			name = Config;
+			path = Config;
+			sourceTree = "<group>";
+		};
+		EE5BB867DC8F2C2527F91407 /* Casks */ = {
+			isa = PBXGroup;
+			children = (
+				FCA007C985D4B9C2110813C9 /* clackinator.rb.erb */,
+			);
+			name = Casks;
+			path = Casks;
+			sourceTree = "<group>";
+		};
+		EF08DBC129562070D128DFD4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D0926632C5783610544D4DC0 /* ClackinatorCoordinator.swift */,
+				CB8BC16205BC2560B9E1510D /* SettingsWindowController.swift */,
+			);
+			name = App;
+			path = App;
+			sourceTree = "<group>";
+		};
+		F808B08F6279EF0039C15A91 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3A58B1E549F31D215A5A4FA8 /* MenuBarContentView.swift */,
+				60C5E778C521E5F173BF3B66 /* MenuBarLabelView.swift */,
+				A304D1025DCD5866D8CF3C0F /* SettingsWindowView.swift */,
+			);
+			name = UI;
+			path = UI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F013F268AEFE6878F90FB4FB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		29DB365A7382032B09F01E6B /* ClackinatorCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F4152E75934229E8AD69169 /* Build configuration list for PBXNativeTarget "ClackinatorCore" */;
+			buildPhases = (
+				F013F268AEFE6878F90FB4FB /* Headers */,
+				A404891B91EAC2FAE00A1A67 /* Sources */,
+				E52C558DAE3386553F4CBBB0 /* Frameworks */,
+				335F250E12DB2B19840B5DAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClackinatorCore;
+			productName = ClackinatorCore;
+			productReference = 6E14E808B77B314EBE03B443 /* ClackinatorCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		621926D941F6F8FCD364939B /* ClackinatorAppStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C591DA6F8075FA8320AA69E9 /* Build configuration list for PBXNativeTarget "ClackinatorAppStore" */;
+			buildPhases = (
+				35CD726A7D7EE6678809FA1F /* Sources */,
+				4D38806CCAD478D0A510A27A /* Frameworks */,
+				E234C0AEF5AB7806F4DE66ED /* Resources */,
+				1B5CD30E0843839216B59DC1 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D6D30881A1EDAF80822EA5F /* PBXTargetDependency */,
+			);
+			name = ClackinatorAppStore;
+			productName = Clackinator;
+			productReference = 8309029EEC92179003985B86 /* Clackinator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		958E61DEB146FEA83A09A0F4 /* ClackinatorCoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83C7990EED36526F80497805 /* Build configuration list for PBXNativeTarget "ClackinatorCoreTests" */;
+			buildPhases = (
+				139BEF9C1DA1B2D4D318D907 /* Sources */,
+				ED18957DF9F68D891E434665 /* Frameworks */,
+				8B4FB1B5C36CA4527C14F689 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				057FE1E375E790C020A50AB6 /* PBXTargetDependency */,
+			);
+			name = ClackinatorCoreTests;
+			productName = ClackinatorCoreTests;
+			productReference = 78A883298A0FA8C7A813FA0F /* ClackinatorCoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A0ED6A096FF76DBF75141376 /* ClackinatorDirect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49955D38062792DAD6C0FEB0 /* Build configuration list for PBXNativeTarget "ClackinatorDirect" */;
+			buildPhases = (
+				AB3A7186077FDF3854D9973B /* Sources */,
+				1B4C86866EEE3D4227BB0CAD /* Frameworks */,
+				89015445C28CE57C89CFB0CC /* Resources */,
+				9563A697E806F2606ADBF59A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2EBEB4912B485C08A05DB900 /* PBXTargetDependency */,
+			);
+			name = ClackinatorDirect;
+			productName = Clackinator;
+			productReference = 195FBA3C0E9D809A4CCDA9FF /* Clackinator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA8F17CFA5E1C1606DF19E2C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1640;
+			};
+			buildConfigurationList = 8D203EE07D0E626540D6F5B7 /* Build configuration list for PBXProject "Clackinator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3048FC63AC1A7E0E63AD05C1;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 38A39C122A15E8B2F39CA6BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A0ED6A096FF76DBF75141376 /* ClackinatorDirect */,
+				621926D941F6F8FCD364939B /* ClackinatorAppStore */,
+				29DB365A7382032B09F01E6B /* ClackinatorCore */,
+				958E61DEB146FEA83A09A0F4 /* ClackinatorCoreTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		335F250E12DB2B19840B5DAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0992799FAAEB499307487E96 /* burst-fast-typing.mp3 in Resources */,
+				567C918D63AB9218A04BF8B5 /* burst-keyboard-clacking.mp3 in Resources */,
+				F194BBC3EB11EFD19015A549 /* burst-typing-burst.mp3 in Resources */,
+				EF1BC65B088CD2A40BAC2E97 /* workbench-hard-keyboard.mp3 in Resources */,
+				03B98C00EE4FD42B123CCDBE /* workbench-keyboard-typing.mp3 in Resources */,
+				3C14D73F8E3F7BC7114D2592 /* workbench-old-computer-typing.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89015445C28CE57C89CFB0CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B4FB1B5C36CA4527C14F689 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E234C0AEF5AB7806F4DE66ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		139BEF9C1DA1B2D4D318D907 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA6CFBA7E19604228FA468A /* AudioTestSupport.swift in Sources */,
+				320300EEE4D31F8DFFA35EA4 /* CustomSoundPackStoreTests.swift in Sources */,
+				E8CE33DF47B65F83CD2042FE /* KeyClassifierTests.swift in Sources */,
+				F62962FDFF067EC5794E6B4C /* ClackinatorCoordinatorTests.swift in Sources */,
+				D2A364B837015B12ED897B70 /* SampledSoundPackRendererTests.swift in Sources */,
+				7070FE47DBA282FAB63DBAE8 /* SoundPackLibraryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35CD726A7D7EE6678809FA1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				229CE98FC1D9CAF0833004CC /* AppStoreAppDelegate.swift in Sources */,
+				9B6FB280C9B31B474D920F6C /* ClackinatorAppStoreApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A404891B91EAC2FAE00A1A67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A31F77C97AE9ED758BC1EF62 /* ClackinatorCoordinator.swift in Sources */,
+				350032DF247843AE2BBF8CF7 /* SettingsWindowController.swift in Sources */,
+				D9366BAB1074A9DA2F757DE1 /* AudioPlaybackEngine.swift in Sources */,
+				6883E0592EA39E6CF279D999 /* CustomSoundPackStore.swift in Sources */,
+				930DEA141491F8B61310AE11 /* SampledSoundPackRenderer.swift in Sources */,
+				BBF7B018CFA6B76DB2B66AA0 /* SoundPack.swift in Sources */,
+				C0B470A8A964F741878BF92F /* SoundPackCatalog.swift in Sources */,
+				F4D38A4C0411F1F965B14669 /* SoundPackLibrary.swift in Sources */,
+				65EE37A38624D3CCB96F04ED /* SoundSynthesis.swift in Sources */,
+				3C8E8F72231263BF68A336AC /* EventTapKeyboardEventSource.swift in Sources */,
+				010CCC6B1881E1FDD4B989C5 /* KeyClassifier.swift in Sources */,
+				94611B1844E1AA60BF56DD99 /* KeyboardEventSource.swift in Sources */,
+				0F3187F54F1EAACD6D272A90 /* KeyboardEventSourceFactory.swift in Sources */,
+				546A25D376785A20B6956556 /* MonitorKeyboardEventSource.swift in Sources */,
+				0BD3D8A104F9A37ECE517AAD /* AppChannel.swift in Sources */,
+				1EDDE3A9B51315E1EA376F65 /* KeyClass.swift in Sources */,
+				FFD0D54859AD7C19279D9E9F /* KeyEvent.swift in Sources */,
+				63227EFD9A68D1E7486CAC81 /* KeyboardPermissionManager.swift in Sources */,
+				BDCA5ABFD16422B6B0814045 /* KeyboardPermissionStatus.swift in Sources */,
+				C84AC1A55692391F31CF1436 /* ClackinatorLogger.swift in Sources */,
+				855F136C84EFEAB6B3C92603 /* LaunchAtLoginManager.swift in Sources */,
+				C2B38A18E9010E4FF0D09254 /* MenuBarContentView.swift in Sources */,
+				40F0CE7459B61BB1C19F1DA0 /* MenuBarLabelView.swift in Sources */,
+				2A0619C2233FC45DF393EBFB /* SettingsWindowView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB3A7186077FDF3854D9973B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BE8666DB8AAC98523335F91 /* DirectAppDelegate.swift in Sources */,
+				B7E81841F7C28AEF9810AAFB /* ClackinatorDirectApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		057FE1E375E790C020A50AB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ClackinatorCore;
+			target = 29DB365A7382032B09F01E6B /* ClackinatorCore */;
+			targetProxy = B3ED31CCAAE21E22B0458094 /* PBXContainerItemProxy */;
+		};
+		1D6D30881A1EDAF80822EA5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ClackinatorCore;
+			target = 29DB365A7382032B09F01E6B /* ClackinatorCore */;
+			targetProxy = 7D2D36448E9F7689C3E7115A /* PBXContainerItemProxy */;
+		};
+		2EBEB4912B485C08A05DB900 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ClackinatorCore;
+			target = 29DB365A7382032B09F01E6B /* ClackinatorCore */;
+			targetProxy = 7A61DE374E17556B6BD442FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0F1963B899CDA81240657133 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clackinator.core;
+				PRODUCT_NAME = ClackinatorCore;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		152D440EFB0679E4BC3ADA23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clackinator.coretests;
+				PRODUCT_NAME = ClackinatorCoreTests;
+				SDKROOT = macosx;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "";
+			};
+			name = Release;
+		};
+		181F04588E5E16DE3D9DCE78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		1CC49735B77A15470FE14A6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_ENTITLEMENTS = Config/ClackinatorAppStore.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Config/ClackinatorAppStore-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clackinator.appstore;
+				PRODUCT_NAME = Clackinator;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2F0DB52AA6524DF092D0924E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Config/ClackinatorDirect-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clackinator.direct;
+				PRODUCT_NAME = Clackinator;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5245796F4A3F3F6F847C022C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clackinator.coretests;
+				PRODUCT_NAME = ClackinatorCoreTests;
+				SDKROOT = macosx;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "";
+			};
+			name = Debug;
+		};
+		5B30CE4508F49D821A5C1592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6A3C016AAADEB356B4D8F5F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Config/ClackinatorDirect-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clackinator.direct;
+				PRODUCT_NAME = Clackinator;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		7AC70BBAB061D1226626785E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Config/ClackinatorAppStore.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Config/ClackinatorAppStore-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clackinator.appstore;
+				PRODUCT_NAME = Clackinator;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F1525754CF157EC76AEBF82B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clackinator.core;
+				PRODUCT_NAME = ClackinatorCore;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F4152E75934229E8AD69169 /* Build configuration list for PBXNativeTarget "ClackinatorCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1525754CF157EC76AEBF82B /* Release */,
+				0F1963B899CDA81240657133 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49955D38062792DAD6C0FEB0 /* Build configuration list for PBXNativeTarget "ClackinatorDirect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A3C016AAADEB356B4D8F5F0 /* Release */,
+				2F0DB52AA6524DF092D0924E /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83C7990EED36526F80497805 /* Build configuration list for PBXNativeTarget "ClackinatorCoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				152D440EFB0679E4BC3ADA23 /* Release */,
+				5245796F4A3F3F6F847C022C /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D203EE07D0E626540D6F5B7 /* Build configuration list for PBXProject "Clackinator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B30CE4508F49D821A5C1592 /* Debug */,
+				181F04588E5E16DE3D9DCE78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C591DA6F8075FA8320AA69E9 /* Build configuration list for PBXNativeTarget "ClackinatorAppStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AC70BBAB061D1226626785E /* Release */,
+				1CC49735B77A15470FE14A6A /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA8F17CFA5E1C1606DF19E2C /* Project object */;
+}

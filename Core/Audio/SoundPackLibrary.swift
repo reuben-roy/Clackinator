@@ -1,7 +1,9 @@
 import Foundation
 
 public enum SoundPackLibrary {
-    public static let all: [SoundPack] = recipes.map { recipe in
+    public static let all: [SoundPack] = synthesizedPacks + sampledPacks
+
+    private static let synthesizedPacks: [SoundPack] = recipes.map { recipe in
         SoundPack(
             id: recipe.id,
             name: recipe.name,
@@ -10,6 +12,15 @@ public enum SoundPackLibrary {
             pitchJitterRange: recipe.pitchJitterRange,
             sampleGroups: SoundSynthesizer.renderSamples(for: recipe)
         )
+    }
+
+    private static let sampledPacks: [SoundPack] = sampledDefinitions.compactMap { definition in
+        do {
+            return try SampledSoundPackRenderer.renderPack(from: definition)
+        } catch {
+            ClackinatorLogger.audio.error("Failed to load bundled sampled pack \(definition.id, privacy: .public): \(error.localizedDescription, privacy: .public)")
+            return nil
+        }
     }
 
     public static func pack(id: String) -> SoundPack? {
@@ -70,6 +81,33 @@ public enum SoundPackLibrary {
                 decay: 0.015,
                 gain: 0.74
             )
+        )
+    ]
+
+    private static let sampledDefinitions: [SampledPackDefinition] = [
+        SampledPackDefinition(
+            id: "burst",
+            name: "Burst",
+            summary: "Short, lively sampled typing bursts with clipped mechanical chatter and quick rebounds.",
+            gain: 0.9,
+            pitchJitterRange: -0.028...0.028,
+            resourceNames: [
+                "burst-fast-typing.mp3",
+                "burst-keyboard-clacking.mp3",
+                "burst-typing-burst.mp3"
+            ]
+        ),
+        SampledPackDefinition(
+            id: "workbench",
+            name: "Workbench",
+            summary: "Longer sampled keyboard beds carved into denser workday taps with a heavier desk feel.",
+            gain: 0.92,
+            pitchJitterRange: -0.024...0.024,
+            resourceNames: [
+                "workbench-keyboard-typing.mp3",
+                "workbench-old-computer-typing.mp3",
+                "workbench-hard-keyboard.mp3"
+            ]
         )
     ]
 }

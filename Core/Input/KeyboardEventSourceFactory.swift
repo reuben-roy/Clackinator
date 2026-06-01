@@ -15,7 +15,7 @@ public enum KeyboardEventSourceFactory {
                 return eventTap
             }
 
-            KeyTokLogger.input.warning("Falling back to NSEvent monitors after event tap initialization failed.")
+            ClackinatorLogger.input.warning("Falling back to NSEvent monitors after event tap initialization failed.")
         }
 
         let monitor = MonitorKeyboardEventSource()

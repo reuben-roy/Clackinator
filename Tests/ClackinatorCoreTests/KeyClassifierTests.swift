@@ -1,5 +1,5 @@
 import XCTest
-@testable import KeyTokCore
+@testable import ClackinatorCore
 
 final class KeyClassifierTests: XCTestCase {
     private let classifier = KeyClassifier()

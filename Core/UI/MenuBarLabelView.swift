@@ -1,9 +1,9 @@
 import SwiftUI
 
 public struct MenuBarLabelView: View {
-    @ObservedObject private var coordinator: KeyTokCoordinator
+    @ObservedObject private var coordinator: ClackinatorCoordinator
 
-    public init(coordinator: KeyTokCoordinator) {
+    public init(coordinator: ClackinatorCoordinator) {
         self.coordinator = coordinator
     }
 

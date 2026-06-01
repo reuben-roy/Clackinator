@@ -1,0 +1,11 @@
+cask "clackinator" do
+  version "<%= version %>"
+  sha256 "<%= sha256 %>"
+
+  url "https://github.com/<%= owner %>/<%= repo %>/releases/download/v#{version}/ClackinatorDirect-#{version}.zip"
+  name "Clackinator"
+  desc "Mechanical keyboard sound utility for macOS"
+  homepage "https://github.com/<%= owner %>/<%= repo %>"
+
+  app "Clackinator.app"
+end

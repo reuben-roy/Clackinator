@@ -1,8 +1,8 @@
 import SwiftUI
-import KeyTokCore
+import ClackinatorCore
 
 @main
-struct KeyTokDirectApp: App {
+struct ClackinatorDirectApp: App {
     @NSApplicationDelegateAdaptor(DirectAppDelegate.self) private var appDelegate
 
     var body: some Scene {

@@ -4,22 +4,24 @@ set -euo pipefail
 VERSION="${1:?usage: ./script/package_direct_release.sh <version>}"
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-PROJECT_PATH="$ROOT_DIR/KeyTok.xcodeproj"
+PROJECT_PATH="$ROOT_DIR/Clackinator.xcodeproj"
 ARCHIVE_DIR="$ROOT_DIR/build/archives"
 EXPORT_DIR="$ROOT_DIR/build/export"
-ARCHIVE_PATH="$ARCHIVE_DIR/KeyTokDirect.xcarchive"
-APP_PATH="$ARCHIVE_PATH/Products/Applications/KeyTokDirect.app"
-ZIP_PATH="$EXPORT_DIR/KeyTokDirect-${VERSION}.zip"
-SHA_PATH="$EXPORT_DIR/KeyTokDirect-${VERSION}.sha256"
+DERIVED_DATA_PATH="$ROOT_DIR/build/DerivedData"
+ARCHIVE_PATH="$ARCHIVE_DIR/ClackinatorDirect.xcarchive"
+APP_PATH="$ARCHIVE_PATH/Products/Applications/Clackinator.app"
+ZIP_PATH="$EXPORT_DIR/ClackinatorDirect-${VERSION}.zip"
+SHA_PATH="$EXPORT_DIR/ClackinatorDirect-${VERSION}.sha256"
 
 mkdir -p "$ARCHIVE_DIR" "$EXPORT_DIR"
 rm -rf "$ARCHIVE_PATH" "$ZIP_PATH" "$SHA_PATH"
 
 xcodebuild \
   -project "$PROJECT_PATH" \
-  -scheme KeyTokDirect \
+  -scheme ClackinatorDirect \
   -configuration Release \
   -destination "generic/platform=macOS" \
+  -derivedDataPath "$DERIVED_DATA_PATH" \
   -archivePath "$ARCHIVE_PATH" \
   archive
 

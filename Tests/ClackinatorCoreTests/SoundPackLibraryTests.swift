@@ -1,11 +1,11 @@
 import XCTest
-@testable import KeyTokCore
+@testable import ClackinatorCore
 
 final class SoundPackLibraryTests: XCTestCase {
-    func testThreeNamedPacksExist() {
+    func testBuiltInPackNamesIncludeSynthesizedAndSampledPacks() {
         let packNames = SoundPackLibrary.all.map(\.name)
 
-        XCTAssertEqual(packNames, ["Linear", "Tactile", "Clicky"])
+        XCTAssertEqual(packNames, ["Linear", "Tactile", "Clicky", "Burst", "Workbench"])
     }
 
     func testEveryPackContainsPrimaryKeyClassesForKeyDown() {
