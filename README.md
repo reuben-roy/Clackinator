@@ -27,6 +27,14 @@ Optional: stream unified logs while developing:
 ./script/build_and_run.sh --telemetry
 ```
 
+## Documentation
+
+Developer-facing docs live in [`docs/`](docs/README.md):
+
+- [`docs/developer-guide.md`](docs/developer-guide.md) covers project generation, targets, local debugging, permissions, and tests.
+- [`docs/customization.md`](docs/customization.md) covers sound packs, settings, channel-specific behavior, and privacy boundaries.
+- Existing release docs remain in [`docs/release.md`](docs/release.md) and [`docs/app-store-validation.md`](docs/app-store-validation.md).
+
 ## High-level architecture
 
 The app shells are thin SwiftUI `MenuBarExtra` wrappers. All product logic runs in `ClackinatorCoordinator`, which wires input, audio, permissions, and UI together.
